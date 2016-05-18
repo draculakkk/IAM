@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE list[
+  <!ELEMENT list (item*) >
+  <!ELEMENT item EMPTY>
+  <!ATTLIST item key CDATA #IMPLIED>
+  <!ATTLIST item zh CDATA #IMPLIED>
+]>
+<list>
+  <item key="Isca" zh="是否为ca用户"/>
+  <item key="Locked_tag" zh="是否锁定"/>
+  <item key="Cuserid" zh="操作id"/>
+  <item key="Able_time" zh="生效日期"/>
+  <item key="Authen_type" zh="认证方式"/>
+  <item key="Disable_time" zh="失效日期"/>
+  <item key="Dr" zh="删除标记"/>
+  <item key="keyuser" zh="是否关键用户"/>
+  <item key="Langcode" zh="语言"/>
+  <item key="PK_corp" zh="所属公司"/>
+  <item key="Pwdlevelcode" zh="密码级别"/>
+  <item key="Pwdtype" zh="密码设置类型"/>
+  <item key="TS" zh="时间戳"/>
+  <item key="User_code" zh="操作员编码"/>
+  <item key="USER_name" zh="操作员名称"/>
+  <item key="User_note" zh="操作员描述"/>
+  <item key="user_password" zh="操作员密码"/>
+  <item key="Pwdparam" zh="修改日期"/>
+  <item key="Memo" zh="备注"/>
+</list>

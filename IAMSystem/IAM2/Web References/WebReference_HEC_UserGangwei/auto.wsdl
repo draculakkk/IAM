@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.aurora-framework.org/schema" name="auto" targetNamespace="http://www.aurora-framework.org/schema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.aurora-framework.org/schema">
+      <xsd:element name="parameter">
+        <xsd:complexType>
+          <xsd:attribute name="ws_password" type="xsd:string" />
+          <xsd:attribute name="ws_user_name" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="model">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="employee_position_records">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element maxOccurs="unbounded" name="record">
+                    <xsd:complexType>
+                      <xsd:attribute name="company_code" type="xsd:string" />
+                      <xsd:attribute name="enabled_flag" type="xsd:string" />
+                      <xsd:attribute name="employee_code" type="xsd:string" />
+                      <xsd:attribute name="primary_position_flag" type="xsd:string" />
+                      <xsd:attribute name="position_code" type="xsd:string" />
+                      <xsd:attribute name="position_name" type="xsd:string" />
+                      <xsd:attribute name="employee_name" type="xsd:string" />
+                      <xsd:attribute name="company_name" type="xsd:string" />
+                      <xsd:attribute name="unit_name" type="xsd:string" />
+                      <xsd:attribute name="unit_code" type="xsd:string" />
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+          <xsd:attribute name="success" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="response_message">
+    <wsdl:part name="response_part" element="tns:model" />
+  </wsdl:message>
+  <wsdl:message name="request_message">
+    <wsdl:part name="request_part" element="tns:parameter" />
+  </wsdl:message>
+  <wsdl:portType name="auto_portType">
+    <wsdl:operation name="execute">
+      <wsdl:input message="tns:request_message" />
+      <wsdl:output message="tns:response_message" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="position.cux_employee_position_ws_query.svc_binding" type="tns:auto_portType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="execute">
+      <soap:operation soapAction="execute" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="auto_service">
+    <wsdl:port name="auto_port" binding="tns:position.cux_employee_position_ws_query.svc_binding">
+      <soap:address location="http://10.124.88.176:8383/hecprod/modules/sys/WS/position/cux_employee_position_ws_query.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

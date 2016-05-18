@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE list[
+  <!ELEMENT list (item*)>
+  <!ELEMENT item EMPTY>
+  <!ATTLIST item key CDATA #IMPLIED>
+  <!ATTLIST item zh CDATA #IMPLIED>
+]>
+<list>
+  <item key="ID" zh="pk"/>
+  <item key="NAME" zh="计算机名"/>
+  <item key="DESCRIPTION" zh="描述"/>
+  <item key="ExpiryDate" zh="最后一次登陆时间"/>
+  <item key="IsSync" zh="是否同步"/>
+  <item key="SyncDate" zh="同步时间"/>
+  <item key="IsDelete" zh="是否删除"/>
+  <item key="DeleteDateTime" zh="删除时间"/>
+  <item key="Memo" zh="备注"/>
+  <item key="ENABLE" zh="是否启用"/>
+  <item key="p1" zh="启用时间"/>
+</list>

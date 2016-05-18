@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns="http://CTree" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ax21="http://CTree/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://CTree" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>MyWESService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://CTree/xsd">
+      <xs:complexType name="Tree">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="childs" nillable="true" type="xs:anyType" />
+          <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parent" nillable="true" type="ax21:Tree" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax22="http://CTree/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://CTree">
+      <xs:import namespace="http://CTree/xsd" />
+      <xs:element name="showinfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filepathuserinfo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="showinfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MyWESServiceException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="MyWESServiceException" nillable="true" type="ns:Exception" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="maina">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filepath" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="mainaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:Tree" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="load">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="loadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:Tree" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getrole">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="aa" nillable="true" type="ax22:Tree" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getchildOrganization">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="a" nillable="true" type="ax22:Tree" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="mainaRequest">
+    <wsdl:part name="parameters" element="ns:maina" />
+  </wsdl:message>
+  <wsdl:message name="mainaResponse">
+    <wsdl:part name="parameters" element="ns:mainaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MyWESServiceException">
+    <wsdl:part name="parameters" element="ns:MyWESServiceException" />
+  </wsdl:message>
+  <wsdl:message name="loadRequest">
+    <wsdl:part name="parameters" element="ns:load" />
+  </wsdl:message>
+  <wsdl:message name="loadResponse">
+    <wsdl:part name="parameters" element="ns:loadResponse" />
+  </wsdl:message>
+  <wsdl:message name="getchildOrganizationRequest">
+    <wsdl:part name="parameters" element="ns:getchildOrganization" />
+  </wsdl:message>
+  <wsdl:message name="getroleRequest">
+    <wsdl:part name="parameters" element="ns:getrole" />
+  </wsdl:message>
+  <wsdl:message name="showinfoRequest">
+    <wsdl:part name="parameters" element="ns:showinfo" />
+  </wsdl:message>
+  <wsdl:message name="showinfoResponse">
+    <wsdl:part name="parameters" element="ns:showinfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MyWESServicePortType">
+    <wsdl:operation name="maina">
+      <wsdl:input wsaw:Action="urn:maina" message="ns:mainaRequest" />
+      <wsdl:output wsaw:Action="urn:mainaResponse" message="ns:mainaResponse" />
+      <wsdl:fault wsaw:Action="urn:mainaMyWESServiceException" name="MyWESServiceException" message="ns:MyWESServiceException" />
+    </wsdl:operation>
+    <wsdl:operation name="load">
+      <wsdl:input wsaw:Action="urn:load" message="ns:loadRequest" />
+      <wsdl:output wsaw:Action="urn:loadResponse" message="ns:loadResponse" />
+      <wsdl:fault wsaw:Action="urn:loadMyWESServiceException" name="MyWESServiceException" message="ns:MyWESServiceException" />
+    </wsdl:operation>
+    <wsdl:operation name="getchildOrganization">
+      <wsdl:input wsaw:Action="urn:getchildOrganization" message="ns:getchildOrganizationRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="getrole">
+      <wsdl:input wsaw:Action="urn:getrole" message="ns:getroleRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="showinfo">
+      <wsdl:input wsaw:Action="urn:showinfo" message="ns:showinfoRequest" />
+      <wsdl:output wsaw:Action="urn:showinfoResponse" message="ns:showinfoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MyWESServiceSoap11Binding" type="ns:MyWESServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="maina">
+      <soap:operation soapAction="urn:maina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyWESServiceException">
+        <soap:fault use="literal" name="MyWESServiceException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="load">
+      <soap:operation soapAction="urn:load" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyWESServiceException">
+        <soap:fault use="literal" name="MyWESServiceException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getrole">
+      <soap:operation soapAction="urn:getrole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getchildOrganization">
+      <soap:operation soapAction="urn:getchildOrganization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="showinfo">
+      <soap:operation soapAction="urn:showinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MyWESServiceSoap12Binding" type="ns:MyWESServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="maina">
+      <soap12:operation soapAction="urn:maina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyWESServiceException">
+        <soap12:fault use="literal" name="MyWESServiceException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="load">
+      <soap12:operation soapAction="urn:load" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyWESServiceException">
+        <soap12:fault use="literal" name="MyWESServiceException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getrole">
+      <soap12:operation soapAction="urn:getrole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getchildOrganization">
+      <soap12:operation soapAction="urn:getchildOrganization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="showinfo">
+      <soap12:operation soapAction="urn:showinfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MyWESServiceHttpBinding" type="ns:MyWESServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="maina">
+      <http:operation location="maina" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="load">
+      <http:operation location="load" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getrole">
+      <http:operation location="getrole" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getchildOrganization">
+      <http:operation location="getchildOrganization" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="showinfo">
+      <http:operation location="showinfo" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyWESService">
+    <wsdl:port name="MyWESServiceHttpSoap11Endpoint" binding="ns:MyWESServiceSoap11Binding">
+      <soap:address location="http://localhost:8989/axis2/services/MyWESService.MyWESServiceHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="MyWESServiceHttpSoap12Endpoint" binding="ns:MyWESServiceSoap12Binding">
+      <soap12:address location="http://localhost:8989/axis2/services/MyWESService.MyWESServiceHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="MyWESServiceHttpEndpoint" binding="ns:MyWESServiceHttpBinding">
+      <http:address location="http://localhost:8989/axis2/services/MyWESService.MyWESServiceHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

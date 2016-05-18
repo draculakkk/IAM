@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE list[
+  <!ELEMENT list (item*)>
+  <!ELEMENT item EMPTY>
+  <!ATTLIST item key CDATA #IMPLIED>
+  <!ATTLIST item zh CDATA #IMPLIED>
+]>
+<list>
+  <item key="BAPIBNAME" zh="SAP ID"/>
+  <item key="LASTNAME" zh="用户姓"/>
+  <item key="FIRSTNAME" zh="用户名"/>
+  <item key="DEPARTMENT_NAME" zh="部门"/>
+  <item key="LANGUAGE" zh="语言"/>
+  <item key="MOBLIE_NUMBER" zh="移动电话"/>
+  <item key="E_MAIL" zh="email"/>
+  <item key="USERTYPE" zh="用户类型"/>
+  <item key="PASSWORD" zh="初始密码"/>
+  <item key="START_DATE" zh="有效期自"/>
+  <item key="END_DATE" zh="有效期至"/>
+  <item key="UCLASSTYPE" zh="许可证id"/>
+  <item key="LOGIN_LANGUAGE" zh="登录语言"/>
+  <item key="DECIMAL_POINT_FORMAT" zh="小数点格式"/>
+  <item key="DATE_FORMAT" zh="日期格式"/>
+  <item key="TIME_FORMAT" zh="时间格式"/>
+  <item key="OUTPUT_EQUIMENT" zh="输出设备"/>
+  <item key="NOWTIME_EQUIMENT" zh="立即输出"/>
+  <item key="OUTPUTED_DELETE" zh="输出后删除"/>
+  <item key="USER_TIMEZONE" zh="用户所在时区"/>
+  <item key="SYSTEM_TIMEZONE" zh="系统所在时区"/>
+  <item key="PARAMENTERID" zh="参数id"/>
+  <item key="PARAMENTERVALUE" zh="参数值"/>
+  <item key="PARAMETERTEXT" zh="段文本"/>
+</list>

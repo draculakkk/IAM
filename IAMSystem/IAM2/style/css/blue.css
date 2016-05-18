@@ -1,0 +1,86 @@
+﻿body {
+}
+/*MSGrid Begin*/
+.MSGridView
+{
+	padding: 0px;
+	background-color: #c6def6;
+}
+
+.MSGridView .AlternatingRowStyle TD
+{
+	background-color: #f0f6ff;
+	vertical-align: middle;
+}
+
+.MSGridView th
+{
+	background-color: #c6def6;
+	height: 20px;
+	background-image: url(../images/msgrid/Grid2_Title.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #010101;
+	text-align: left;
+	padding-left: 3px;
+	vertical-align: middle;
+}
+
+.MSGridView td
+{
+	text-align: left;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+}
+.MSGridView a:Link
+{
+	font-size: 12px;
+	font-weight: normal;
+	color: #196cbd;
+	text-decoration: underline;
+}
+.MSGridView a:Visited
+{
+	font-size: 12px;
+	font-weight: normal;
+	color: #196cbd;
+	text-decoration: underline;
+}
+.MSGridView a:Hover
+{
+	font-size: 12px;
+	font-weight: normal;
+	color: #4E4E4E;
+	text-decoration: none;
+}
+
+.AddGrid 
+{
+    width:100%;
+    background-color:#eeeeee;
+}
+
+.AddGrid th
+{
+    background-color: #c6def6;
+	height: 20px;
+	background-image: url(../images/msgrid/Grid2_Title.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #010101;
+	text-align: left;
+	padding-left: 3px;
+	vertical-align: middle;
+}
+
+.pager 
+{
+    text-align: center;
+    background-color: #FFCC66;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #333333;
+}

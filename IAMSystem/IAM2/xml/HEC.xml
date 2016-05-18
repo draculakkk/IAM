@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE list[
+  <!ELEMENT list (item*) >
+  <!ELEMENT item EMPTY>
+  <!ATTLIST item key CDATA #IMPLIED >
+  <!ATTLIST item zh CDATA #IMPLIED>
+]>
+<list>
+  <item key="User_CD" zh="用户账号"/>
+  <item key="USER_NAME" zh="用户姓名"/>
+  <item key="DESCRIPTION" zh="用户描述"/>
+  <item key="START_DATE" zh="用户起始日期"/>
+  <item key="END_DATE" zh="用户终止日期"/>
+  <item key="EMPLOYEE_CODE" zh="员工编号"/>
+  <item key="EMPLOYEE_NAME" zh="员工名称"/>
+  <item key="ROLE_CODE" zh="角色编码"/>
+  <item key="COMPANY_CODE" zh="公司编码"/>
+  <item key="ROLE_START_DATE" zh="角色起始日期"/>
+  <item key="ROLE_END_DATE" zh="角色终止日期"/>
+  <item key="STATUS" zh="用户状态"/>
+  <item key="ERROR_MSG" zh="错误信息"/>
+  <item key="frozen_flag" zh="冻结标志"/>
+  <item key="frozen_date" zh="冻结日期"/>
+  <item key="password_lifespan_days" zh="登录天数过期"/>
+  <item key="password_lifespan_access" zh="登录次数过期"/>
+  <item key="USER_CODE" zh="员工工号"/>
+  <item key="Memo" zh="备注"/>
+</list>

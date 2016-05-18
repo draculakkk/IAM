@@ -1,0 +1,1590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2B5331E-0DD4-4A58-93D9-B0A5163D1D43}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IAM2</RootNamespace>
+    <AssemblyName>IAM2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.4.5.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="addemo.aspx" />
+    <Content Include="Admin\ADDefaultWorkGroupManager.aspx" />
+    <Content Include="Admin\ADInfoManager.aspx" />
+    <Content Include="Admin\AdUserInfoManager.aspx" />
+    <Content Include="Admin\adUser\ADWorkGroupManger.aspx" />
+    <Content Include="Admin\adUser\OtherCreate.aspx" />
+    <Content Include="Admin\adUser\SystemCreate.aspx" />
+    <Content Include="Admin\adUser\UserCreate.aspx" />
+    <Content Include="Admin\AD_ComputerCreate.aspx" />
+    <Content Include="Admin\AD_ComputerManager.aspx" />
+    <Content Include="Admin\AD_Department_WorkGroupCreate.aspx" />
+    <Content Include="Admin\AD_Department_WorkGroupManager.aspx" />
+    <Content Include="Admin\AD_WorkGroupManager.aspx" />
+    <Content Include="Admin\AD_Zhiji_WorkGroupCreate.aspx" />
+    <Content Include="Admin\AD_Zhiji_WorkGroupManager.aspx" />
+    <Content Include="Admin\HECCompanyManager.aspx" />
+    <Content Include="Admin\HECGangwei.aspx" />
+    <Content Include="Admin\HECRoleAndCompany.aspx" />
+    <Content Include="Admin\HECUserInfoCreate.aspx" />
+    <Content Include="Admin\HECUserInfoManager.aspx" />
+    <Content Include="Admin\HECUserRoleCreate.aspx" />
+    <Content Include="Admin\HrDepartmentManager.aspx" />
+    <Content Include="Admin\HREmployeeCreate.aspx" />
+    <Content Include="Admin\HREmployeeManager.aspx" />
+    <Content Include="Admin\HRhzRoleManager.aspx" />
+    <Content Include="Admin\HRRoleList.aspx" />
+    <Content Include="Admin\HrSmUserManager.aspx" />
+    <Content Include="Admin\HRUserRoleManager.aspx" />
+    <Content Include="Admin\LogListManager.aspx" />
+    <Content Include="Admin\RoleTemplateCreate.aspx" />
+    <Content Include="Admin\RoleTemplateInfoPage.aspx" />
+    <Content Include="Admin\RoleTemplateManger.aspx" />
+    <Content Include="Admin\SapRoleList.aspx" />
+    <Content Include="Admin\sapUserCreate.aspx" />
+    <Content Include="Admin\sapUserManger.aspx" />
+    <Content Include="Admin\SAPUserparmenterEdit.aspx" />
+    <Content Include="Admin\SAP_ParametersAdd.aspx" />
+    <Content Include="Admin\SAP_ParametersSettingAdd.aspx" />
+    <Content Include="Admin\SAP_ParametersSettingManager.aspx" />
+    <Content Include="Admin\SelectSapUserList.aspx" />
+    <Content Include="Admin\SyncConfigInfoManager.aspx" />
+    <Content Include="Admin\SyncListManager.aspx" />
+    <Content Include="Admin\TaskEmailManager.aspx" />
+    <Content Include="Admin\TCLicense.aspx" />
+    <Content Include="Admin\TCRolelist.aspx" />
+    <Content Include="Admin\TCUserInfoCreate.aspx" />
+    <Content Include="Admin\TCUserInfoManager.aspx" />
+    <Content Include="Admin\userlist.aspx" />
+    <Content Include="Admin\UserRoleAdd.aspx" />
+    <Content Include="Admin\UserRoleManager.aspx" />
+    <Content Include="ConflictResolution\ConfigMaping.aspx" />
+    <Content Include="ConflictResolution\HRChayi.aspx" />
+    <Content Include="ConflictResolution\HRUserResolution.aspx" />
+    <Content Include="ConflictResolution\HRUserResolution1.aspx" />
+    <Content Include="ConflictResolution\UserConfilictByUser.aspx" />
+    <Content Include="ConflictResolution\UserConflictResolution.aspx" />
+    <Content Include="Content\akzhan-jwysiwyg\controls\wysiwyg.colorpicker.js" />
+    <Content Include="Content\akzhan-jwysiwyg\controls\wysiwyg.image.js" />
+    <Content Include="Content\akzhan-jwysiwyg\controls\wysiwyg.link.js" />
+    <Content Include="Content\akzhan-jwysiwyg\controls\wysiwyg.table.js" />
+    <Content Include="Content\akzhan-jwysiwyg\GPL-LICENSE.txt" />
+    <Content Include="Content\akzhan-jwysiwyg\help\docs\scheme.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\01-basic.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\02-full.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\03-ajax.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\04-resizable.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\05-ui-dialogs.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\06-hide-heading-buttons.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\07-enable-rtl.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\08-auto-grow.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\09-css-autoloading.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\10-custom-controls.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\11-plugins.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\12-writing-plugins.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\index.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\examples\jw_ajax.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\blueprint\ie.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\blueprint\print.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\blueprint\screen.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\jasmine\jasmine-html.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\jasmine\jasmine.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\jasmine\jasmine.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\jquery.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\jquery.simplemodal.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\jquery.simplemodal.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\autoload\jquery.autoload.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\CHANGELOG.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\css\farbtastic.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\demo\demo1.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\demo\demo2.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\farbtastic.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\images\marker.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\images\mask.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\images\wheel.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\LICENSE.txt" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\plugins\farbtastic\README.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.blind.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.bounce.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.clip.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.core.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.drop.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.explode.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.fold.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.highlight.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.pulsate.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.scale.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.shake.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.slide.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.effects.transfer.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.accordion.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.accordion.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.all.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.autocomplete.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.base.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.button.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.button.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.core.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.core.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.datepicker.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.datepicker.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.dialog.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.dialog.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.draggable.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.droppable.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.mouse.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.position.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.progressbar.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.progressbar.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.resizable.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.resizable.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.selectable.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.slider.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.slider.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.sortable.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.tabs.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.tabs.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.theme.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\ui\jquery.ui.widget.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\x.png" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\css\issue014-cg.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\css\issue145.css" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\images\quote02.gif" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue005.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue014-cg.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue016.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue026.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue029.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue130.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue145.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue152_iframe.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue154.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue214-cg.html" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\jasmine\154.spec.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\jasmine\159.spec.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\jasmine\controls\html.spec.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\jasmine\functions\insertHtml.spec.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\jasmine\helper.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\jasmine\jwysiwyg.spec.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\jasmine\plugins.spec.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\jasmine\plugins\i18n.spec.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\jasmine\plugins\rmFormat.spec.js" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\run-jasmine-tests.html" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.cs.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.de.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.en.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.es.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.fr.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.it.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.ja.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.nl.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.pl.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.pt_br.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.ru.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.se.js" />
+    <Content Include="Content\akzhan-jwysiwyg\i18n\lang.sl.js" />
+    <Content Include="Content\akzhan-jwysiwyg\index.html" />
+    <Content Include="Content\akzhan-jwysiwyg\jquery.wysiwyg.bg.png" />
+    <Content Include="Content\akzhan-jwysiwyg\jquery.wysiwyg.css" />
+    <Content Include="Content\akzhan-jwysiwyg\jquery.wysiwyg.gif" />
+    <Content Include="Content\akzhan-jwysiwyg\jquery.wysiwyg.jpg" />
+    <Content Include="Content\akzhan-jwysiwyg\jquery.wysiwyg.js" />
+    <Content Include="Content\akzhan-jwysiwyg\jquery.wysiwyg.modal.css" />
+    <Content Include="Content\akzhan-jwysiwyg\jquery.wysiwyg.no-alpha.gif" />
+    <Content Include="Content\akzhan-jwysiwyg\jquery.wysiwyg.old-school.css" />
+    <Content Include="Content\akzhan-jwysiwyg\MIT-LICENSE.txt" />
+    <Content Include="Content\akzhan-jwysiwyg\plugins\wysiwyg.autoload.js" />
+    <Content Include="Content\akzhan-jwysiwyg\plugins\wysiwyg.fullscreen.js" />
+    <Content Include="Content\akzhan-jwysiwyg\plugins\wysiwyg.i18n.js" />
+    <Content Include="Content\akzhan-jwysiwyg\plugins\wysiwyg.rmFormat.js" />
+    <Content Include="Content\module.css" />
+    <Content Include="Content\My97DatePicker\calendar.js" />
+    <Content Include="Content\My97DatePicker\lang\en.js" />
+    <Content Include="Content\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Content\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Content\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Content\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Content\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Content\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Content\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Content\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Content\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Content\My97DatePicker\WdatePicker.js" />
+    <Content Include="Content\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="Content\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="Content\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="Content\My97DatePicker\开发包\readme.txt" />
+    <Content Include="Content\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="Content\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="Content\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="Content\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="Content\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="Content\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="Content\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Content\pure-ext.css" />
+    <Content Include="Content\pure-min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\Site1.css" />
+    <Content Include="Content\Sitebak.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Control\DifferenceControl.ascx" />
+    <Content Include="Control\LeftMenu.ascx" />
+    <Content Include="Control\TransferControl.ascx" />
+    <Content Include="DEMo.aspx" />
+    <Content Include="DLL\AspNetPager.dll" />
+    <Content Include="Dome.htm" />
+    <Content Include="error.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="hecdemo.aspx" />
+    <Content Include="HRDemo.aspx" />
+    <Content Include="HrEmployeeInfo.aspx" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\arrow-down.png" />
+    <Content Include="Images\arrow-up.png" />
+    <Content Include="Images\btnlogin.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\hedhelp.jpg" />
+    <Content Include="Images\hedhelp1.jpg" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\icon_remove.png" />
+    <Content Include="Images\layout5_login.png" />
+    <Content Include="Images\lft_arrow.gif" />
+    <Content Include="Images\menu.jpg" />
+    <Content Include="Images\mi.jpg" />
+    <Content Include="Images\mjia.gif" />
+    <Content Include="Images\mjian.gif" />
+    <Content Include="Images\Noimage.jpg" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\piliang_loading.gif" />
+    <Content Include="Images\sidb.gif" />
+    <Content Include="Images\sidlink.gif" />
+    <Content Include="Images\star.png" />
+    <Content Include="Images\toplogo.png" />
+    <Content Include="Images\UIMP_Banner.png" />
+    <Content Include="Images\UIMP_Banner_bg.png" />
+    <Content Include="LayoutBase.aspx" />
+    <Content Include="Login.aspx" />
+    <None Include="mailTemplate\AddUserInfoBySAP.cshtml" />
+    <Content Include="Properties\PublishProfiles\iam.pubxml.user" />
+    <Content Include="Report\ADComputerReport.aspx" />
+    <Content Include="Report\ADGroupReport.aspx" />
+    <Content Include="Report\ADUserReport.aspx" />
+    <Content Include="Report\DifferenceReport.aspx" />
+    <Content Include="Report\DifferenceReportByTemplateName.aspx" />
+    <Content Include="Report\DifferenceReportByUserAndTemplate.aspx" />
+    <Content Include="Report\HECRoleReport.aspx" />
+    <Content Include="Report\HECUserGangwei.aspx" />
+    <Content Include="Report\HECUserReport.aspx" />
+    <Content Include="Report\HrRoleReport.aspx" />
+    <Content Include="Report\HrUserReport.aspx" />
+    <Content Include="Report\lizhibaobiao.aspx" />
+    <Content Include="Report\ReportByUserCode.aspx" />
+    <Content Include="Report\SapRoleReport.aspx" />
+    <Content Include="Report\SapUserReport.aspx" />
+    <Content Include="Report\TCRoleReport.aspx" />
+    <Content Include="Report\TcUserReportnew.aspx" />
+    <Content Include="rolelist\HECGangweiList.aspx" />
+    <Content Include="rolelist\HECRoleList.aspx" />
+    <Content Include="rolelist\HRCompanyManager.aspx" />
+    <Content Include="rolelist\HrRoleList.aspx" />
+    <Content Include="rolelist\SapRoleList.aspx" />
+    <Content Include="rolelist\TcRoleList.aspx" />
+    <Content Include="sapDemo.aspx" />
+    <Content Include="Scripts\Customer.js" />
+    <Content Include="Scripts\HEC_Gangwei_JavaScript.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\pager\jquery.pagination.js" />
+    <Content Include="Scripts\pager\members.js" />
+    <Content Include="Scripts\pager\pagination.css" />
+    <Content Include="Scripts\ScrollTopFunction.js" />
+    <Content Include="Scripts\tableChangeClick.js" />
+    <Content Include="Scripts\TableHelper.js" />
+    <Content Include="Scripts\themes\base\images\animated-overlay.gif" />
+    <Content Include="Scripts\themes\base\images\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Scripts\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\themes\base\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Scripts\themes\base\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Scripts\themes\base\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Scripts\themes\base\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Scripts\themes\base\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.all.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.base.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.button.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.core.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.menu.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.selectmenu.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.slider.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.theme.css" />
+    <Content Include="Scripts\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Scripts\ui\jquery.ui.accordion.js" />
+    <Content Include="Scripts\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Scripts\ui\jquery.ui.button.js" />
+    <Content Include="Scripts\ui\jquery.ui.core.js" />
+    <Content Include="Scripts\ui\jquery.ui.datepicker.js" />
+    <Content Include="Scripts\ui\jquery.ui.dialog.js" />
+    <Content Include="Scripts\ui\jquery.ui.draggable.js" />
+    <Content Include="Scripts\ui\jquery.ui.droppable.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-blind.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-bounce.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-clip.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-drop.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-explode.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-fade.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-fold.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-highlight.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-puff.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-scale.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-shake.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-size.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-slide.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-transfer.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect.js" />
+    <Content Include="Scripts\ui\jquery.ui.menu.js" />
+    <Content Include="Scripts\ui\jquery.ui.mouse.js" />
+    <Content Include="Scripts\ui\jquery.ui.position.js" />
+    <Content Include="Scripts\ui\jquery.ui.progressbar.js" />
+    <Content Include="Scripts\ui\jquery.ui.resizable.js" />
+    <Content Include="Scripts\ui\jquery.ui.selectable.js" />
+    <Content Include="Scripts\ui\jquery.ui.selectmenu.js" />
+    <Content Include="Scripts\ui\jquery.ui.slider.js" />
+    <Content Include="Scripts\ui\jquery.ui.sortable.js" />
+    <Content Include="Scripts\ui\jquery.ui.spinner.js" />
+    <Content Include="Scripts\ui\jquery.ui.tabs.js" />
+    <Content Include="Scripts\ui\jquery.ui.tooltip.js" />
+    <Content Include="Scripts\ui\jquery.ui.widget.js" />
+    <Content Include="style\css\backmain.css" />
+    <Content Include="style\css\blue.css" />
+    <Content Include="style\css\BulletionManager.css" />
+    <Content Include="style\css\EmailBlockManager.css" />
+    <Content Include="style\css\EmailManager.css" />
+    <Content Include="style\css\ErrorLogManager.css" />
+    <Content Include="style\css\LogManager.css" />
+    <Content Include="style\css\module.css" />
+    <Content Include="style\css\RoleManager.css" />
+    <Content Include="style\css\style.css" />
+    <Content Include="style\css\SystemHelpAdd.css" />
+    <Content Include="style\css\SystemModuleManager.css" />
+    <Content Include="style\css\TableCss.css" />
+    <Content Include="style\css\UserMapingSystem.css" />
+    <Content Include="style\css\UserRole.css" />
+    <Content Include="style\images\1.gif" />
+    <Content Include="style\images\143.gif" />
+    <Content Include="style\images\2.gif" />
+    <Content Include="style\images\3.gif" />
+    <Content Include="style\images\3.png" />
+    <Content Include="style\images\4.gif" />
+    <Content Include="style\images\4.png" />
+    <Content Include="style\images\5.gif" />
+    <Content Include="style\images\6.gif" />
+    <Content Include="style\images\adbgmsg.png" />
+    <Content Include="style\images\addressbook.gif" />
+    <Content Include="style\images\ans.jpg" />
+    <Content Include="style\images\ansico.gif" />
+    <Content Include="style\images\banertit.jpg" />
+    <Content Include="style\images\banner.jpg" />
+    <Content Include="style\images\bannerbg.jpg" />
+    <Content Include="style\images\bannerbg2.jpg" />
+    <Content Include="style\images\bico.gif" />
+    <Content Include="style\images\btnonoff.gif" />
+    <Content Include="style\images\btn_bg.gif" />
+    <Content Include="style\images\close.jpg" />
+    <Content Include="style\images\default_left_info.gif" />
+    <Content Include="style\images\default_middle_info.gif" />
+    <Content Include="style\images\default_right_info.gif" />
+    <Content Include="style\images\eidt.jpg" />
+    <Content Include="style\images\errbg.jpg" />
+    <Content Include="style\images\errboxbg.jpg" />
+    <Content Include="style\images\faq.jpg" />
+    <Content Include="style\images\faqbtn.gif" />
+    <Content Include="style\images\faqbtn.jpg" />
+    <Content Include="style\images\faqico.gif" />
+    <Content Include="style\images\hedhelp.jpg" />
+    <Content Include="style\images\helpbar.jpg" />
+    <Content Include="style\images\img1.jpg" />
+    <Content Include="style\images\imgyd.jpg" />
+    <Content Include="style\images\indbg.png" />
+    <Content Include="style\images\inhover.jpg" />
+    <Content Include="style\images\jt.gif" />
+    <Content Include="style\images\kbg.jpg" />
+    <Content Include="style\images\kbg_1.jpg" />
+    <Content Include="style\images\lag.gif" />
+    <Content Include="style\images\lag.jpg" />
+    <Content Include="style\images\layout3_login1_bg - 副本.jpg" />
+    <Content Include="style\images\layout3_login1_bg2.jpg" />
+    <Content Include="style\images\layout3_login1_bg22.jpg" />
+    <Content Include="style\images\lefrit.gif" />
+    <Content Include="style\images\left.gif" />
+    <Content Include="style\images\lft_arrow.gif" />
+    <Content Include="style\images\loading.gif" />
+    <Content Include="style\images\loading1.gif" />
+    <Content Include="style\images\loading13.gif" />
+    <Content Include="style\images\loading3.gif" />
+    <Content Include="style\images\loading5.gif" />
+    <Content Include="style\images\logbtn.jpg" />
+    <Content Include="style\images\logo.jpg" />
+    <Content Include="style\images\loyoutbg-1.jpg" />
+    <Content Include="style\images\menu.gif" />
+    <Content Include="style\images\menu.jpg" />
+    <Content Include="style\images\mi.jpg" />
+    <Content Include="style\images\mi1.jpg" />
+    <Content Include="style\images\mjia.gif" />
+    <Content Include="style\images\mjian.gif" />
+    <Content Include="style\images\MSGrid\Grid2_title.gif" />
+    <Content Include="style\images\MSGrid\Grid_title.gif" />
+    <Content Include="style\images\pass.jpg" />
+    <Content Include="style\images\phb_s1.gif" />
+    <Content Include="style\images\phb_s2.gif" />
+    <Content Include="style\images\po.gif" />
+    <Content Include="style\images\rht_arrow.gif" />
+    <Content Include="style\images\right.gif" />
+    <Content Include="style\images\savebtn.gif" />
+    <Content Include="style\images\savebtn.jpg" />
+    <Content Include="style\images\sidb.gif" />
+    <Content Include="style\images\sidebarbg.jpg" />
+    <Content Include="style\images\sidlink.gif" />
+    <Content Include="style\images\storadd.gif" />
+    <Content Include="style\images\stordel.png" />
+    <Content Include="style\images\storeclabtm.gif" />
+    <Content Include="style\images\storeclatit.gif" />
+    <Content Include="style\images\storetop.gif" />
+    <Content Include="style\images\storetop_new.gif" />
+    <Content Include="style\images\storttitimg.gif" />
+    <Content Include="style\images\themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="style\images\themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="style\images\themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="style\images\themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="style\images\themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="style\images\themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="style\images\themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="style\images\themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="style\images\themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="style\images\themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="style\images\themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="style\images\themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="style\images\themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="style\images\themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="style\images\themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="style\images\themes\redmond\jquery-ui-1.8.18.custom.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.accordion.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.all.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.autocomplete.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.base.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.button.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.core.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.datepicker.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.dialog.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.progressbar.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.resizable.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.selectable.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.slider.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.tabs.css" />
+    <Content Include="style\images\themes\redmond\jquery.ui.theme.css" />
+    <Content Include="style\images\toplbg.jpg" />
+    <Content Include="style\images\toplogo.png" />
+    <Content Include="style\images\tw - 副本.jpg" />
+    <Content Include="style\images\tw.jpg" />
+    <Content Include="style\images\tw2.jpg" />
+    <Content Include="style\images\win_top.png" />
+    <Content Include="style\Site.css" />
+    <Content Include="syncTest\WebForm1.aspx" />
+    <Content Include="tcdemo.aspx" />
+    <Content Include="Web References\IAMSendMailServices\MessageWebService.disco" />
+    <Content Include="Web References\WebReference3\adservice.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xml\AD.xml" />
+    <Content Include="xml\ADComputer.xml" />
+    <Content Include="xml\HEC.xml" />
+    <Content Include="xml\HR.xml" />
+    <Content Include="xml\Sap.xml" />
+    <Content Include="xml\TC.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addemo.aspx.cs">
+      <DependentUpon>addemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addemo.aspx.designer.cs">
+      <DependentUpon>addemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ADDefaultWorkGroupManager.aspx.cs">
+      <DependentUpon>ADDefaultWorkGroupManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ADDefaultWorkGroupManager.aspx.designer.cs">
+      <DependentUpon>ADDefaultWorkGroupManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ADInfoManager.aspx.cs">
+      <DependentUpon>ADInfoManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ADInfoManager.aspx.designer.cs">
+      <DependentUpon>ADInfoManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserInfoManager.aspx.cs">
+      <DependentUpon>AdUserInfoManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserInfoManager.aspx.designer.cs">
+      <DependentUpon>AdUserInfoManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adUser\ADWorkGroupManger.aspx.cs">
+      <DependentUpon>ADWorkGroupManger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adUser\ADWorkGroupManger.aspx.designer.cs">
+      <DependentUpon>ADWorkGroupManger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adUser\OtherCreate.aspx.cs">
+      <DependentUpon>OtherCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adUser\OtherCreate.aspx.designer.cs">
+      <DependentUpon>OtherCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adUser\SystemCreate.aspx.cs">
+      <DependentUpon>SystemCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adUser\SystemCreate.aspx.designer.cs">
+      <DependentUpon>SystemCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adUser\UserCreate.aspx.cs">
+      <DependentUpon>UserCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adUser\UserCreate.aspx.designer.cs">
+      <DependentUpon>UserCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AD_ComputerCreate.aspx.cs">
+      <DependentUpon>AD_ComputerCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AD_ComputerCreate.aspx.designer.cs">
+      <DependentUpon>AD_ComputerCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AD_ComputerManager.aspx.cs">
+      <DependentUpon>AD_ComputerManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AD_ComputerManager.aspx.designer.cs">
+      <DependentUpon>AD_ComputerManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AD_Department_WorkGroupCreate.aspx.cs">
+      <DependentUpon>AD_Department_WorkGroupCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AD_Department_WorkGroupCreate.aspx.designer.cs">
+      <DependentUpon>AD_Department_WorkGroupCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AD_Department_WorkGroupManager.aspx.cs">
+      <DependentUpon>AD_Department_WorkGroupManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AD_Department_WorkGroupManager.aspx.designer.cs">
+      <DependentUpon>AD_Department_WorkGroupManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AD_WorkGroupManager.aspx.cs">
+      <DependentUpon>AD_WorkGroupManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AD_WorkGroupManager.aspx.designer.cs">
+      <DependentUpon>AD_WorkGroupManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AD_Zhiji_WorkGroupCreate.aspx.cs">
+      <DependentUpon>AD_Zhiji_WorkGroupCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AD_Zhiji_WorkGroupCreate.aspx.designer.cs">
+      <DependentUpon>AD_Zhiji_WorkGroupCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AD_Zhiji_WorkGroupManager.aspx.cs">
+      <DependentUpon>AD_Zhiji_WorkGroupManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AD_Zhiji_WorkGroupManager.aspx.designer.cs">
+      <DependentUpon>AD_Zhiji_WorkGroupManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HECCompanyManager.aspx.cs">
+      <DependentUpon>HECCompanyManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HECCompanyManager.aspx.designer.cs">
+      <DependentUpon>HECCompanyManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HECGangwei.aspx.cs">
+      <DependentUpon>HECGangwei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HECGangwei.aspx.designer.cs">
+      <DependentUpon>HECGangwei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HECGangweiInfo.ashx.cs">
+      <DependentUpon>HECGangweiInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HECRoleAndCompany.aspx.cs">
+      <DependentUpon>HECRoleAndCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HECRoleAndCompany.aspx.designer.cs">
+      <DependentUpon>HECRoleAndCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HECUserInfoCreate.aspx.cs">
+      <DependentUpon>HECUserInfoCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HECUserInfoCreate.aspx.designer.cs">
+      <DependentUpon>HECUserInfoCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HECUserInfoManager.aspx.cs">
+      <DependentUpon>HECUserInfoManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HECUserInfoManager.aspx.designer.cs">
+      <DependentUpon>HECUserInfoManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HECUserRoleCreate.aspx.cs">
+      <DependentUpon>HECUserRoleCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HECUserRoleCreate.aspx.designer.cs">
+      <DependentUpon>HECUserRoleCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HrDepartmentManager.aspx.cs">
+      <DependentUpon>HrDepartmentManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HrDepartmentManager.aspx.designer.cs">
+      <DependentUpon>HrDepartmentManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HREmployeeCreate.aspx.cs">
+      <DependentUpon>HREmployeeCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HREmployeeCreate.aspx.designer.cs">
+      <DependentUpon>HREmployeeCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HREmployeeManager.aspx.cs">
+      <DependentUpon>HREmployeeManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HREmployeeManager.aspx.designer.cs">
+      <DependentUpon>HREmployeeManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HRhzRoleManager.aspx.cs">
+      <DependentUpon>HRhzRoleManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HRhzRoleManager.aspx.designer.cs">
+      <DependentUpon>HRhzRoleManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HRRoleList.aspx.cs">
+      <DependentUpon>HRRoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HRRoleList.aspx.designer.cs">
+      <DependentUpon>HRRoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HrSmUserManager.aspx.cs">
+      <DependentUpon>HrSmUserManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HrSmUserManager.aspx.designer.cs">
+      <DependentUpon>HrSmUserManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HRUserRoleManager.aspx.cs">
+      <DependentUpon>HRUserRoleManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HRUserRoleManager.aspx.designer.cs">
+      <DependentUpon>HRUserRoleManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LogListManager.aspx.cs">
+      <DependentUpon>LogListManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LogListManager.aspx.designer.cs">
+      <DependentUpon>LogListManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoleTemplateCreate.aspx.cs">
+      <DependentUpon>RoleTemplateCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RoleTemplateCreate.aspx.designer.cs">
+      <DependentUpon>RoleTemplateCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoleTemplateInfoPage.aspx.cs">
+      <DependentUpon>RoleTemplateInfoPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RoleTemplateInfoPage.aspx.designer.cs">
+      <DependentUpon>RoleTemplateInfoPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoleTemplateManger.aspx.cs">
+      <DependentUpon>RoleTemplateManger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RoleTemplateManger.aspx.designer.cs">
+      <DependentUpon>RoleTemplateManger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SapRoleList.aspx.cs">
+      <DependentUpon>SapRoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SapRoleList.aspx.designer.cs">
+      <DependentUpon>SapRoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\sapUserCreate.aspx.cs">
+      <DependentUpon>sapUserCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\sapUserCreate.aspx.designer.cs">
+      <DependentUpon>sapUserCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\sapUserManger.aspx.cs">
+      <DependentUpon>sapUserManger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\sapUserManger.aspx.designer.cs">
+      <DependentUpon>sapUserManger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SAPUserparmenterEdit.aspx.cs">
+      <DependentUpon>SAPUserparmenterEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SAPUserparmenterEdit.aspx.designer.cs">
+      <DependentUpon>SAPUserparmenterEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SAP_ParametersAdd.aspx.cs">
+      <DependentUpon>SAP_ParametersAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SAP_ParametersAdd.aspx.designer.cs">
+      <DependentUpon>SAP_ParametersAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SAP_ParametersSettingAdd.aspx.cs">
+      <DependentUpon>SAP_ParametersSettingAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SAP_ParametersSettingAdd.aspx.designer.cs">
+      <DependentUpon>SAP_ParametersSettingAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SAP_ParametersSettingManager.aspx.cs">
+      <DependentUpon>SAP_ParametersSettingManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SAP_ParametersSettingManager.aspx.designer.cs">
+      <DependentUpon>SAP_ParametersSettingManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SelectSapUserList.aspx.cs">
+      <DependentUpon>SelectSapUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SelectSapUserList.aspx.designer.cs">
+      <DependentUpon>SelectSapUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SyncConfigInfoManager.aspx.cs">
+      <DependentUpon>SyncConfigInfoManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SyncConfigInfoManager.aspx.designer.cs">
+      <DependentUpon>SyncConfigInfoManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SyncListManager.aspx.cs">
+      <DependentUpon>SyncListManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SyncListManager.aspx.designer.cs">
+      <DependentUpon>SyncListManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TaskEmailManager.aspx.cs">
+      <DependentUpon>TaskEmailManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TaskEmailManager.aspx.designer.cs">
+      <DependentUpon>TaskEmailManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TCLicense.aspx.cs">
+      <DependentUpon>TCLicense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TCLicense.aspx.designer.cs">
+      <DependentUpon>TCLicense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TCRolelist.aspx.cs">
+      <DependentUpon>TCRolelist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TCRolelist.aspx.designer.cs">
+      <DependentUpon>TCRolelist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TCUserInfoCreate.aspx.cs">
+      <DependentUpon>TCUserInfoCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TCUserInfoCreate.aspx.designer.cs">
+      <DependentUpon>TCUserInfoCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TCUserInfoManager.aspx.cs">
+      <DependentUpon>TCUserInfoManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TCUserInfoManager.aspx.designer.cs">
+      <DependentUpon>TCUserInfoManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\userlist.aspx.cs">
+      <DependentUpon>userlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\userlist.aspx.designer.cs">
+      <DependentUpon>userlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserRoleAdd.aspx.cs">
+      <DependentUpon>UserRoleAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserRoleAdd.aspx.designer.cs">
+      <DependentUpon>UserRoleAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserRoleManager.aspx.cs">
+      <DependentUpon>UserRoleManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserRoleManager.aspx.designer.cs">
+      <DependentUpon>UserRoleManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BLL\ActionLog.cs" />
+    <Compile Include="BLL\ADSyncServices.cs" />
+    <Compile Include="BLL\Ajax.cs" />
+    <Compile Include="BLL\ajax1.cs" />
+    <Compile Include="BLL\Ajax2.cs" />
+    <Compile Include="BLL\Extensions.cs" />
+    <Compile Include="BLL\HECSyncServices.cs" />
+    <Compile Include="BLL\HEC_Gangwei_Ajax.cs" />
+    <Compile Include="BLL\HrCompanyEntity.cs" />
+    <Compile Include="BLL\MailServices.cs" />
+    <Compile Include="BLL\SAPSyncServices.cs" />
+    <Compile Include="BLL\SendMail.cs" />
+    <Compile Include="BLL\SyncTaskBase.cs" />
+    <Compile Include="BLL\TcSyncServices.cs" />
+    <Compile Include="BLL\Untityone.cs" />
+    <Compile Include="BLL\UserRoleManager.cs" />
+    <Compile Include="ConflictResolution\ConfigMaping.aspx.cs">
+      <DependentUpon>ConfigMaping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConflictResolution\ConfigMaping.aspx.designer.cs">
+      <DependentUpon>ConfigMaping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConflictResolution\HRChayi.aspx.cs">
+      <DependentUpon>HRChayi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConflictResolution\HRChayi.aspx.designer.cs">
+      <DependentUpon>HRChayi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConflictResolution\HRUserResolution.aspx.cs">
+      <DependentUpon>HRUserResolution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConflictResolution\HRUserResolution.aspx.designer.cs">
+      <DependentUpon>HRUserResolution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConflictResolution\HRUserResolution1.aspx.cs">
+      <DependentUpon>HRUserResolution1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConflictResolution\HRUserResolution1.aspx.designer.cs">
+      <DependentUpon>HRUserResolution1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConflictResolution\UserConfilictByUser.aspx.cs">
+      <DependentUpon>UserConfilictByUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConflictResolution\UserConfilictByUser.aspx.designer.cs">
+      <DependentUpon>UserConfilictByUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConflictResolution\UserConflictResolution.aspx.cs">
+      <DependentUpon>UserConflictResolution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConflictResolution\UserConflictResolution.aspx.designer.cs">
+      <DependentUpon>UserConflictResolution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\DifferenceControl.ascx.cs">
+      <DependentUpon>DifferenceControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\DifferenceControl.ascx.designer.cs">
+      <DependentUpon>DifferenceControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\LeftMenu.ascx.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\LeftMenu.ascx.designer.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TransferControl.ascx.cs">
+      <DependentUpon>TransferControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\TransferControl.ascx.designer.cs">
+      <DependentUpon>TransferControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DEMo.aspx.cs">
+      <DependentUpon>DEMo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DEMo.aspx.designer.cs">
+      <DependentUpon>DEMo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelExportAjax.ashx.cs">
+      <DependentUpon>ExcelExportAjax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hecdemo.aspx.cs">
+      <DependentUpon>hecdemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hecdemo.aspx.designer.cs">
+      <DependentUpon>hecdemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRDemo.aspx.cs">
+      <DependentUpon>HRDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRDemo.aspx.designer.cs">
+      <DependentUpon>HRDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrEmployeeInfo.aspx.cs">
+      <DependentUpon>HrEmployeeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrEmployeeInfo.aspx.designer.cs">
+      <DependentUpon>HrEmployeeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KeepSession.ashx.cs">
+      <DependentUpon>KeepSession.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutBase.aspx.cs">
+      <DependentUpon>LayoutBase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LayoutBase.aspx.designer.cs">
+      <DependentUpon>LayoutBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ADComputerReport.aspx.cs">
+      <DependentUpon>ADComputerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ADComputerReport.aspx.designer.cs">
+      <DependentUpon>ADComputerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ADGroupReport.aspx.cs">
+      <DependentUpon>ADGroupReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ADGroupReport.aspx.designer.cs">
+      <DependentUpon>ADGroupReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ADUserReport.aspx.cs">
+      <DependentUpon>ADUserReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ADUserReport.aspx.designer.cs">
+      <DependentUpon>ADUserReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DifferenceReport.aspx.cs">
+      <DependentUpon>DifferenceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\DifferenceReport.aspx.designer.cs">
+      <DependentUpon>DifferenceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DifferenceReportByTemplateName.aspx.cs">
+      <DependentUpon>DifferenceReportByTemplateName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\DifferenceReportByTemplateName.aspx.designer.cs">
+      <DependentUpon>DifferenceReportByTemplateName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DifferenceReportByUserAndTemplate.aspx.cs">
+      <DependentUpon>DifferenceReportByUserAndTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\DifferenceReportByUserAndTemplate.aspx.designer.cs">
+      <DependentUpon>DifferenceReportByUserAndTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\HECRoleReport.aspx.cs">
+      <DependentUpon>HECRoleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\HECRoleReport.aspx.designer.cs">
+      <DependentUpon>HECRoleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\HECUserGangwei.aspx.cs">
+      <DependentUpon>HECUserGangwei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\HECUserGangwei.aspx.designer.cs">
+      <DependentUpon>HECUserGangwei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\HECUserReport.aspx.cs">
+      <DependentUpon>HECUserReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\HECUserReport.aspx.designer.cs">
+      <DependentUpon>HECUserReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\HrRoleReport.aspx.cs">
+      <DependentUpon>HrRoleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\HrRoleReport.aspx.designer.cs">
+      <DependentUpon>HrRoleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\HrUserReport.aspx.cs">
+      <DependentUpon>HrUserReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\HrUserReport.aspx.designer.cs">
+      <DependentUpon>HrUserReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\lizhibaobiao.aspx.cs">
+      <DependentUpon>lizhibaobiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\lizhibaobiao.aspx.designer.cs">
+      <DependentUpon>lizhibaobiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportByUserCode.aspx.cs">
+      <DependentUpon>ReportByUserCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportByUserCode.aspx.designer.cs">
+      <DependentUpon>ReportByUserCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SapRoleReport.aspx.cs">
+      <DependentUpon>SapRoleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\SapRoleReport.aspx.designer.cs">
+      <DependentUpon>SapRoleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SapUserReport.aspx.cs">
+      <DependentUpon>SapUserReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\SapUserReport.aspx.designer.cs">
+      <DependentUpon>SapUserReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TCRoleReport.aspx.cs">
+      <DependentUpon>TCRoleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\TCRoleReport.aspx.designer.cs">
+      <DependentUpon>TCRoleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TcUserReportnew.aspx.cs">
+      <DependentUpon>TcUserReportnew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\TcUserReportnew.aspx.designer.cs">
+      <DependentUpon>TcUserReportnew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rolelist\HECGangweiList.aspx.cs">
+      <DependentUpon>HECGangweiList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rolelist\HECGangweiList.aspx.designer.cs">
+      <DependentUpon>HECGangweiList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rolelist\HECRoleList.aspx.cs">
+      <DependentUpon>HECRoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rolelist\HECRoleList.aspx.designer.cs">
+      <DependentUpon>HECRoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rolelist\HRCompanyManager.aspx.cs">
+      <DependentUpon>HRCompanyManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rolelist\HRCompanyManager.aspx.designer.cs">
+      <DependentUpon>HRCompanyManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rolelist\HrRoleList.aspx.cs">
+      <DependentUpon>HrRoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rolelist\HrRoleList.aspx.designer.cs">
+      <DependentUpon>HrRoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rolelist\SapRoleList.aspx.cs">
+      <DependentUpon>SapRoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rolelist\SapRoleList.aspx.designer.cs">
+      <DependentUpon>SapRoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rolelist\TcRoleList.aspx.cs">
+      <DependentUpon>TcRoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rolelist\TcRoleList.aspx.designer.cs">
+      <DependentUpon>TcRoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sapDemo.aspx.cs">
+      <DependentUpon>sapDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sapDemo.aspx.designer.cs">
+      <DependentUpon>sapDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAP_BLL\HEC\HECEmailBody.cs" />
+    <Compile Include="SAP_BLL\HR\HREmailBody.cs" />
+    <Compile Include="SAP_BLL\InfoAndRoleList.cs" />
+    <Compile Include="SAP_BLL\SAPEmailBody.cs" />
+    <Compile Include="SAP_BLL\TC\TCEmailBody.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="syncTest\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="syncTest\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tcdemo.aspx.cs">
+      <DependentUpon>tcdemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tcdemo.aspx.designer.cs">
+      <DependentUpon>tcdemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="ValidateLoginName.ashx.cs">
+      <DependentUpon>ValidateLoginName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\IAMSendMailServices\Reference.cs" />
+    <Compile Include="Web References\WebReference1\Reference.cs" />
+    <Compile Include="Web References\WebReference2\Reference.cs" />
+    <Compile Include="Web References\WebReference3\Reference.cs" />
+    <Compile Include="Web References\WebReferenceNewTC\Reference.cs" />
+    <Compile Include="Web References\WebReferenceSapRoleList\Reference.cs" />
+    <Compile Include="Web References\WebReferenceSapRoleNew\Reference.cs" />
+    <Compile Include="Web References\WebReferenceSapUserInfoNew\Reference.cs" />
+    <Compile Include="Web References\WebReferenceSapUserInfo\Reference.cs" />
+    <Compile Include="Web References\WebReferenceSapUserListNew1\Reference.cs" />
+    <Compile Include="Web References\WebReferenceSapUserListNew\Reference.cs" />
+    <Compile Include="Web References\WebReferenceSapUserList\Reference.cs" />
+    <Compile Include="Web References\WebReferenceTCNew\Reference.cs" />
+    <Compile Include="Web References\WebReferenceTC\Reference.cs" />
+    <Compile Include="Web References\WebReference\Reference.cs" />
+    <Compile Include="Web References\WebReference_HEC_bumen\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference_HEC_Gangwei\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference_HEC_UserGangwei\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExcelExportAjax.ashx" />
+    <Content Include="Admin\master.Master" />
+    <Content Include="mailTemplate\AddUserInfo.cshtml" />
+    <Content Include="mailTemplate\DisabledUserInfo.cshtml" />
+    <Content Include="mailTemplate\EditUserInfo.cshtml" />
+    <Content Include="mailTemplate\HrUserInfo.cshtml" />
+    <Content Include="mailTemplate\UserInfoConflied.cshtml" />
+    <Content Include="Scripts\ui\.jshintrc" />
+    <Content Include="style\images\MSGrid\Thumbs.db" />
+    <Content Include="style\images\Thumbs.db" />
+    <Content Include="Template\ExcelTemplate\ADComputerReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\AdGroupReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\AdUserReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\ADWorkgroupComputerReportold.xlsx" />
+    <Content Include="Template\ExcelTemplate\HecRoleReport1.xlsx" />
+    <Content Include="Template\ExcelTemplate\HECUserReport1.xlsx" />
+    <Content Include="Template\ExcelTemplate\HREmployeeList.xlsx" />
+    <Content Include="Template\ExcelTemplate\HRRoleReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\HRuserReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\HRUserResolution.xlsx" />
+    <Content Include="Template\ExcelTemplate\SapRoleReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\SapUserReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\TcRoleReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\TcUserReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\UserConfiterTemplate.xlsx" />
+    <Content Include="Web References\IAMSendMailServices\MessageWebService.wsdl" />
+    <Content Include="Web References\IAMSendMailServices\Reference.map" />
+    <Content Include="Web References\WebReference1\auto.wsdl" />
+    <Content Include="Web References\WebReference1\model.datasource" />
+    <Content Include="Web References\WebReference1\Reference.map" />
+    <Content Include="Web References\WebReference2\auto.wsdl" />
+    <Content Include="Web References\WebReference2\model.datasource" />
+    <Content Include="Web References\WebReference2\Reference.map" />
+    <Content Include="Web References\WebReference3\adservice.wsdl" />
+    <Content Include="Web References\WebReference3\ComputerResultInfo.datasource" />
+    <Content Include="Web References\WebReference3\GroupResultInfo.datasource" />
+    <Content Include="Web References\WebReference3\Reference.map" />
+    <Content Include="Web References\WebReference3\UserResultInfo.datasource" />
+    <Content Include="Web References\WebReferenceNewTC\MyTCservice1234.wsdl" />
+    <Content Include="Web References\WebReferenceNewTC\Reference.map" />
+    <Content Include="Web References\WebReferenceNewTC\Tree2.datasource" />
+    <Content Include="Web References\WebReferenceNewTC\UserInfo.datasource" />
+    <Content Include="Web References\WebReferenceSapRoleList\Reference.map" />
+    <Content Include="Web References\WebReferenceSapRoleList\ZiamGetRolesListResponse.datasource" />
+    <Content Include="Web References\WebReferenceSapRoleList\ZIAM_GET_ROLES_LIST  Ver.wsdl" />
+    <Content Include="Web References\WebReferenceSapRoleNew\Reference.map" />
+    <Content Include="Web References\WebReferenceSapRoleNew\ZiamGetRolesListResponse.datasource" />
+    <Content Include="Web References\WebReferenceSapRoleNew\ZIAM_GET_ROLES_LIST.wsdl" />
+    <Content Include="Web References\WebReferenceSapUserInfoNew\Reference.map" />
+    <Content Include="Web References\WebReferenceSapUserInfoNew\ZiamReadSapUserInfomationResponse.datasource" />
+    <Content Include="Web References\WebReferenceSapUserInfoNew\ZIAM_READ_SAP_USER_INFOMATION.wsdl" />
+    <Content Include="Web References\WebReferenceSapUserInfo\Reference.map" />
+    <Content Include="Web References\WebReferenceSapUserInfo\ZiamReadSapUserInfomationResponse.datasource" />
+    <Content Include="Web References\WebReferenceSapUserInfo\ZIAM_READ_SAP_USER_INFOMATION  V0424- XML.wsdl" />
+    <Content Include="Web References\WebReferenceSapUserListNew1\Reference.map" />
+    <Content Include="Web References\WebReferenceSapUserListNew1\ZiamGetSapUserListResponse.datasource" />
+    <Content Include="Web References\WebReferenceSapUserListNew1\ZIAM_GET_SAP_USER_LIST.wsdl" />
+    <Content Include="Web References\WebReferenceSapUserListNew\Reference.map" />
+    <Content Include="Web References\WebReferenceSapUserListNew\ZiamGetSapUserListResponse.datasource" />
+    <Content Include="Web References\WebReferenceSapUserListNew\ZIAM_GET_SAP_USER_LIST.wsdl" />
+    <Content Include="Web References\WebReferenceSapUserList\Reference.map" />
+    <Content Include="Web References\WebReferenceSapUserList\ZiamGetSapUserListResponse.datasource" />
+    <Content Include="Web References\WebReferenceSapUserList\ZIAM_GET_SAP_USER_LIST  Ver.wsdl" />
+    <Content Include="Web References\WebReferenceTCNew\Reference.map" />
+    <Content Include="Web References\WebReferenceTCNew\Shactcservice.wsdl" />
+    <Content Include="Web References\WebReferenceTCNew\Tree2.datasource" />
+    <Content Include="Web References\WebReferenceTCNew\UserInfo.datasource" />
+    <Content Include="Web References\WebReferenceTC\MyWESService.wsdl" />
+    <Content Include="Web References\WebReferenceTC\Reference.map" />
+    <Content Include="Web References\WebReferenceTC\Tree.datasource" />
+    <Content Include="Web References\WebReference\auto.wsdl" />
+    <Content Include="Web References\WebReference\model.datasource" />
+    <Content Include="Web References\WebReference\Reference.map" />
+    <Content Include="mailTemplate\HREmployee.cshtml" />
+    <Content Include="Content\akzhan-jwysiwyg\.gitignore" />
+    <Content Include="Content\akzhan-jwysiwyg\CHANGES.markdown" />
+    <Content Include="Content\akzhan-jwysiwyg\help\bin\compile.bash" />
+    <Content Include="Content\akzhan-jwysiwyg\help\bin\compile.conf" />
+    <Content Include="Content\akzhan-jwysiwyg\help\docs\code_style.rst" />
+    <Content Include="Content\akzhan-jwysiwyg\help\docs\contributing.rst" />
+    <Content Include="Content\akzhan-jwysiwyg\help\docs\get_dia.rst" />
+    <Content Include="Content\akzhan-jwysiwyg\help\docs\internals.rst" />
+    <Content Include="Content\akzhan-jwysiwyg\help\docs\plugins.rst" />
+    <Content Include="Content\akzhan-jwysiwyg\help\docs\scheme.dia" />
+    <Content Include="Content\akzhan-jwysiwyg\help\lib\jasmine\MIT.LICENSE" />
+    <Content Include="Content\akzhan-jwysiwyg\help\tests\issue152.xhtml" />
+    <Content Include="Content\akzhan-jwysiwyg\README.rst" />
+    <Content Include="Content\akzhan-jwysiwyg\_dev\htmlentity\.gitignore" />
+    <Content Include="Content\akzhan-jwysiwyg\_dev\htmlentity\db.csv" />
+    <Content Include="Content\akzhan-jwysiwyg\_dev\htmlentity\Gemfile" />
+    <Content Include="Content\akzhan-jwysiwyg\_dev\htmlentity\test.pl" />
+    <Content Include="Content\akzhan-jwysiwyg\_dev\htmlentity\test.rb" />
+    <Content Include="mailTemplate\sappiliang.cshtml" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="ValidateLoginName.ashx" />
+    <Content Include="Template\ExcelTemplate\HecRoleReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\HECUserReport.xlsx" />
+    <Content Include="Template\ExcelTemplate\ADWorkgroupComputerReport.xlsx" />
+    <Content Include="Admin\HECGangweiInfo.ashx" />
+    <Content Include="KeepSession.ashx" />
+    <Content Include="mailTemplate\AddUserInfoByHEC.cshtml" />
+    <None Include="Properties\PublishProfiles\iam-debug.pubxml" />
+    <None Include="Properties\PublishProfiles\iam-release.pubxml" />
+    <Content Include="Template\ExcelTemplate\lizhibaobiao.xlsx" />
+    <Content Include="Web References\WebReference_HEC_bumen\auto.wsdl" />
+    <Content Include="Web References\WebReference_HEC_bumen\model.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WebReference_HEC_bumen\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\WebReference_HEC_Gangwei\auto.wsdl" />
+    <Content Include="Web References\WebReference_HEC_Gangwei\model.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WebReference_HEC_Gangwei\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\WebReference_HEC_UserGangwei\auto.wsdl" />
+    <Content Include="Web References\WebReference_HEC_UserGangwei\model.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WebReference_HEC_UserGangwei\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Template\ExcelTemplate\hecgangweiuser.xlsx" />
+    <Content Include="Template\ExcelTemplate\hecUserGangwei.xlsx" />
+    <Content Include="Template\ExcelTemplate\Hrchayi.xlsx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDataAccess\BaseDataAccess.csproj">
+      <Project>{5cc7b876-9323-4404-93a0-e7c966490b41}</Project>
+      <Name>BaseDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IAMEntityDAL\IAMEntityDAL.csproj">
+      <Project>{af917393-e99c-423a-81fb-782e4c4422dc}</Project>
+      <Name>IAMEntityDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OLEDBExcelHelper\OLEDBExcelHelper.csproj">
+      <Project>{5fd9af2e-e099-48f2-912e-632a2d4b4630}</Project>
+      <Name>OLEDBExcelHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="downloadFile\" />
+    <Folder Include="WebServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.124.88.176:8383/hecprod/wsdl/modules/sys/WS/position/cux_employee_position_ws_query.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference_HEC_UserGangwei\</RelPath>
+      <UpdateFromURL>http://10.124.88.176:8383/hecprod/wsdl/modules/sys/WS/position/cux_employee_position_ws_query.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IAM2_WebReference_HEC_UserGangwei_auto_service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.124.88.176:8383/hecprod/wsdl/modules/sys/WS/position/cux_position_ws_query.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference_HEC_Gangwei\</RelPath>
+      <UpdateFromURL>http://10.124.88.176:8383/hecprod/wsdl/modules/sys/WS/position/cux_position_ws_query.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IAM2_WebReference_HEC_Gangwei_auto_service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.124.88.176:8383/hecprod/wsdl/modules/sys/WS/unit/cux_unit_ws_query.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference_HEC_bumen\</RelPath>
+      <UpdateFromURL>http://10.124.88.176:8383/hecprod/wsdl/modules/sys/WS/unit/cux_unit_ws_query.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IAM2_WebReference_HEC_bumen_auto_service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16756</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16966/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

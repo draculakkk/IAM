@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://shac.com.cn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://shac.com.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://shac.com.cn/">
+      <s:element name="QueryAllUser">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueryAllUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAllUserResult" type="tns:ArrayOfUserResultInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserResultInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserResultInfo" nillable="true" type="tns:UserResultInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserResultInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Accountname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Displayname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="mDBOverHardQuotaLimit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="mDBOverQuotaLimit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="mDBStorageQuota" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Job" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Group" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lync" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Enabled" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkGroups" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="pwdLastSetTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastLoginTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomeMDB" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountExpires" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomeDirectory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomeDrive" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomeMTA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryAllWorkGroup">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueryAllWorkGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAllWorkGroupResult" type="tns:ArrayOfGroupResultInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGroupResultInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GroupResultInfo" nillable="true" type="tns:GroupResultInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GroupResultInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryUserWorkGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Uid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryUserWorkGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryUserWorkGroupResult" type="tns:ArrayOfGroupResultInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAllComputer">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueryAllComputerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAllComputerResult" type="tns:ArrayOfComputerResultInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfComputerResultInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ComputerResultInfo" nillable="true" type="tns:ComputerResultInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ComputerResultInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpiryDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Enabled" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkGroups" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastLoginTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryAllUserSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAllUser" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllUserSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllWorkGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAllWorkGroup" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllWorkGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAllWorkGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryUserWorkGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryUserWorkGroup" />
+  </wsdl:message>
+  <wsdl:message name="QueryUserWorkGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryUserWorkGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllComputerSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAllComputer" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllComputerSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAllComputerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="QueryAllUser">
+      <wsdl:input message="tns:QueryAllUserSoapIn" />
+      <wsdl:output message="tns:QueryAllUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllWorkGroup">
+      <wsdl:input message="tns:QueryAllWorkGroupSoapIn" />
+      <wsdl:output message="tns:QueryAllWorkGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUserWorkGroup">
+      <wsdl:input message="tns:QueryUserWorkGroupSoapIn" />
+      <wsdl:output message="tns:QueryUserWorkGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllComputer">
+      <wsdl:input message="tns:QueryAllComputerSoapIn" />
+      <wsdl:output message="tns:QueryAllComputerSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryAllUser">
+      <soap:operation soapAction="http://shac.com.cn/QueryAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllWorkGroup">
+      <soap:operation soapAction="http://shac.com.cn/QueryAllWorkGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUserWorkGroup">
+      <soap:operation soapAction="http://shac.com.cn/QueryUserWorkGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllComputer">
+      <soap:operation soapAction="http://shac.com.cn/QueryAllComputer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryAllUser">
+      <soap12:operation soapAction="http://shac.com.cn/QueryAllUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllWorkGroup">
+      <soap12:operation soapAction="http://shac.com.cn/QueryAllWorkGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUserWorkGroup">
+      <soap12:operation soapAction="http://shac.com.cn/QueryUserWorkGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllComputer">
+      <soap12:operation soapAction="http://shac.com.cn/QueryAllComputer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://hzgs211dc.hzgs.shac.com.cn/adservice/ADService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://hzgs211dc.hzgs.shac.com.cn/adservice/ADService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Customer Service Issue</title>
+    <style type="text/css">
+        .content_edge {
+            overflow: hidden;
+            width: 0.75pt;
+            padding: 0 0 0 0;
+        }
+
+        .content_header {
+            height: 25px;
+            width: 528pt;
+            background: #ffcd00;
+            padding-right: 30px;
+            text-align: right;
+            font-family: "Palatino Linotype";
+            font-size: 10.5pt;
+            font-weight: bold;
+        }
+
+        .content_body {
+            padding-left: 20px;
+            padding-top: 10px;
+            vertical-align: top;
+            width: 528pt;
+        }
+
+        .content_bottom {
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 110%;
+            text-align: center;
+            color: #777777;
+            font-size: 9.5pt;
+            font-family: "Verdana";
+            height: 50px;
+        }
+
+        .paragraph_first {
+            line-height: 150%;
+            margin-top: 0px;
+            font-family: "Verdana";
+            font-size: 10.5pt;
+        }
+
+        .paragraph {
+            line-height: 150%;
+            margin-top: 0px;
+            font-family: "Verdana", "宋体";
+            font-size: 9.5pt;
+        }
+
+        .paragraphCN {
+            line-height: 150%;
+            margin-top: 0px;
+            font-family: "Verdana", "宋体";
+            font-size: 10pt;
+            text-indent: 2em;
+        }
+
+        .info {
+            border-collapse: collapse;
+        }
+
+            .info th {
+                padding: 6px;
+                background-color: #336699;
+                font-size: 12px;
+                font-family: "Verdana", "宋体";
+                color: white;
+            }
+
+            .info td {
+                padding: 6px;
+                background-color: white;
+                color: black;
+                font-size: 12px;
+            }
+    </style>
+</head>
+<body>
+    <table cellspacing="0" cellpadding="0" align="center" border="0" width="750">
+
+        <tr>
+            <td class="content_edge"></td>
+            <td class="content_edge"></td>
+        </tr>
+        <tr>
+            <td class="content_edge"></td>
+            <td class="content_body">
+                <p>Hi:</p>
+                <p class="paragraphCN">
+                    @(Model.Actioner) 于 @(Model.time) 给 @(Model.SystemName) 系统中添加一账号；账号名为:@(Model.UserName) 的 @(Model.SystemType) 的账号，具体添加信息如下:<br />
+                </p>
+            </td>
+            <td class="content_edge"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">账号信息：</td>
+        </tr>
+        <tr>
+            <td colspan="3">@(Model.UserInfo)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">角色信息：</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="info" cellpadding="1" cellspacing="0" border="1" width="100%">
+                    <tr>
+                        <th>角色代码</th>
+                        <th>角色名称</th>
+                        <th>公司名称</th>
+                        <th>有效期</th>
+                        <th>添加</th>
+                        <th>删除</th>
+                    </tr>
+                    @foreach (var t in Model.RoleList)
+                    {
+                        <tr>
+                        <th>@(t.rROLECODE)</th>
+                        <th>@(t.rROLENAME)</th>
+                        <th>@(t.cCOMPNYFULLNAME)</th>
+                        <th>@(t.uROLESTARTDATE)至@(t.uROLEENDDATE)</th>
+                        <th>@(t.isdr==2?"是":"")</th>
+                        <th>@(t.isdr==1?"是":"")</th> 
+                        </tr>
+                    }
+
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">岗位信息：</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="info" cellpadding="1" cellspacing="0" border="1" width="100%">
+                    <tr>
+                        <th>账号名称</th>
+                        <th>账号姓名</th>
+                        <th>公司代码</th>
+                        <th>公司名称</th>
+                        <th>部门代码</th>
+                        <th>部门名称</th>
+                        <th>岗位代码</th>
+                        <th>岗位名称</th>
+                        <th>添加</th>
+                        <th>删除</th>
+                    </tr>
+                    @foreach (var x in Model.GangWeiList)
+                    {
+                        <tr>
+                            <td>@(x.EMPLOYEE_CODE)</td>
+                            <td>@(x.EMPLOYEE_NAME)</td>
+                            <td>@(x.COMPANY_CODE)</td>
+                            <td>@(x.COMPANY_NAME)</td>
+                            <td>@(x.UNIT_CODE)</td>
+                            <td>@(x.UNIT_NAME)</td>
+                            <td>@(x.POSITION_CODE)</td>
+                            <td>@(x.POSITION_NAME)</td>
+                            <td>@(x.isdelete == 2 ? "是" : "")</td>
+                            <td>@(x.isdelete == 1 ? "是" : "")</td>
+                        </tr>
+                    }
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="content_edge"></td>
+            <td class="content_bottom">
+                <hr />
+                <span>Please contact ******* if any enquiry or suggestion</span><br />
+                <span>This Email is sent by IAM system automatically, do NOT reply</span><br />
+            </td>
+            <td class="content_edge"></td>
+        </tr>
+
+    </table>
+</body>
+</html>
+

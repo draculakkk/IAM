@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.aurora-framework.org/schema" name="auto" targetNamespace="http://www.aurora-framework.org/schema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.aurora-framework.org/schema">
+      <xsd:element name="parameter">
+        <xsd:complexType>
+          <xsd:attribute name="frozen_flag" type="xsd:string" />
+          <xsd:attribute name="company_code" type="xsd:string" />
+          <xsd:attribute name="role_code" type="xsd:string" />
+          <xsd:attribute name="ws_password" type="xsd:string" />
+          <xsd:attribute name="start_num" type="xsd:string" />
+          <xsd:attribute name="employee_code" type="xsd:string" />
+          <xsd:attribute name="password_lifespan_access" type="xsd:string" />
+          <xsd:attribute name="employee_name" type="xsd:string" />
+          <xsd:attribute name="ws_user_name" type="xsd:string" />
+          <xsd:attribute name="user_name" type="xsd:string" />
+          <xsd:attribute name="frozen_date" type="xsd:string" />
+          <xsd:attribute name="role_end_date" type="xsd:string" />
+          <xsd:attribute name="end_date" type="xsd:string" />
+          <xsd:attribute name="end_num" type="xsd:string" />
+          <xsd:attribute name="password_lifespan_days" type="xsd:string" />
+          <xsd:attribute name="description" type="xsd:string" />
+          <xsd:attribute name="role_start_date" type="xsd:string" />
+          <xsd:attribute name="start_date" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="model">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user_records">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element maxOccurs="unbounded" name="record">
+                    <xsd:complexType>
+                      <xsd:attribute name="frozen_flag" type="xsd:string" />
+                      <xsd:attribute name="company_code" type="xsd:string" />
+                      <xsd:attribute name="role_code" type="xsd:string" />
+                      <xsd:attribute name="employee_code" type="xsd:string" />
+                      <xsd:attribute name="password_lifespan_access" type="xsd:string" />
+                      <xsd:attribute name="employee_name" type="xsd:string" />
+                      <xsd:attribute name="user_name" type="xsd:string" />
+                      <xsd:attribute name="frozen_date" type="xsd:string" />
+                      <xsd:attribute name="role_end_date" type="xsd:string" />
+                      <xsd:attribute name="end_date" type="xsd:string" />
+                      <xsd:attribute name="password_lifespan_days" type="xsd:string" />
+                      <xsd:attribute name="description" type="xsd:string" />
+                      <xsd:attribute name="row_num" type="xsd:string" />
+                      <xsd:attribute name="role_start_date" type="xsd:string" />
+                      <xsd:attribute name="start_date" type="xsd:string" />
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+          <xsd:attribute name="user_sum" type="xsd:string" />
+          <xsd:attribute name="success" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="response_message">
+    <wsdl:part name="response_part" element="tns:model" />
+  </wsdl:message>
+  <wsdl:message name="request_message">
+    <wsdl:part name="request_part" element="tns:parameter" />
+  </wsdl:message>
+  <wsdl:portType name="auto_portType">
+    <wsdl:operation name="execute">
+      <wsdl:input message="tns:request_message" />
+      <wsdl:output message="tns:response_message" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="user.cux_user_ws_query.svc_binding" type="tns:auto_portType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="execute">
+      <soap:operation soapAction="execute" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="auto_service">
+    <wsdl:port name="auto_port" binding="tns:user.cux_user_ws_query.svc_binding">
+      <soap:address location="http://10.124.88.176:8383/hecprod/modules/sys/WS/user/cux_user_ws_query.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

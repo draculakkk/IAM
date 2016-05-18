@@ -1,0 +1,60 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+
+            table thead {
+                background-color: #ccc7f4;
+                color: #1f156a;
+                text-align: left;
+                vertical-align: bottom;
+            }
+
+            table td {
+                background-color: #efeefc;
+                color: #2e23c7;
+            }
+
+            table th, table td {
+                border-left: 1px solid #e2e1fa; /* inner column border */
+                border-width: 0 0 0 1px;
+                font-size: inherit;
+                overflow: visible; /*to make ths where the title is really long work*/
+            }
+    </style>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        function CheckDelete() {
+            var flag = true;
+
+            jQuery("input[type=checkbox]").each(function () {
+                
+                if (jQuery(this).prop("checked")==true)
+                {
+                    alert(jQuery(this).prop("checked"));
+                    flag = false;
+                }
+            });
+            if (flag == true)
+                alert("一个都没选");
+        }
+    </script>
+</head>
+<body class="yui3-skin-mine pure-skin-mine">
+    <form>
+        <input type="checkbox" id="checkbox1" name="chkId" />
+        <input type="checkbox" id="checkbox2" name="chkId" />
+        <input type="checkbox" id="checkbox3" name="chkId" />
+        <input type="checkbox" id="checkbox4" name="chkId" />
+        <input type="checkbox" id="checkbox5" name="chkId" />
+        <input type="checkbox" id="checkbox6" s name="chkId" />
+
+        <input type="button" value="删除" onclick="javascript: CheckDelete();" />
+
+    </form>
+</body>
+</html>

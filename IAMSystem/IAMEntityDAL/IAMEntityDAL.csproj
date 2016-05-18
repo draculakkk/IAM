@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF917393-E99C-423A-81FB-782E4C4422DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IAMEntityDAL</RootNamespace>
+    <AssemblyName>IAMEntityDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\IAMEntityDAL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\IAMEntityDAL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\IAMEntityDAL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\IAMEntityDAL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>iam database.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountMapingDAL.cs" />
+    <Compile Include="ADComputerDAL.cs" />
+    <Compile Include="AddUserMail.cs" />
+    <Compile Include="ADUserInfoDAL.cs" />
+    <Compile Include="ADUserWorkGroupDAL.cs" />
+    <Compile Include="ADWorkGroupDAL.cs" />
+    <Compile Include="AD_Computer_WorkGroupsDAL.cs" />
+    <Compile Include="AD_DefaultWorkGroupDAL.cs" />
+    <Compile Include="AD_Department_WorkGroupDAL.cs" />
+    <Compile Include="AD_Zhiji_WorkGroupDAL.cs" />
+    <Compile Include="AuthorizeLogDAL.cs" />
+    <Compile Include="BaseFind.cs" />
+    <Compile Include="BaseQuery.cs" />
+    <Compile Include="DeferencesSlution\Alignment_Value_Fun.cs" />
+    <Compile Include="EHRDAL\HzRoledelDAL.cs" />
+    <Compile Include="EHRDAL\SyncEHR.cs" />
+    <Compile Include="EHRDAL\view_bd_deptdocDAL.cs" />
+    <Compile Include="EHRDAL\view_bd_psndocDAL.cs" />
+    <Compile Include="EHRDAL\view_role_corp_allocDAL.cs" />
+    <Compile Include="EHRDAL\view_sm_userDAL.cs" />
+    <Compile Include="EHRDAL\view_sm_u_rDAL.cs" />
+    <Compile Include="ExcelHelper.cs" />
+    <Compile Include="HECCompanyInfoDAL.cs" />
+    <Compile Include="HECDepartMentDAL.cs" />
+    <Compile Include="HECGangweiDal.cs" />
+    <Compile Include="HECRoleDAL.cs" />
+    <Compile Include="HECUserDAL.cs" />
+    <Compile Include="HECUserGangweiDAL.cs" />
+    <Compile Include="HECUserInfoDAL.cs" />
+    <Compile Include="HRCompanyDAL.cs" />
+    <Compile Include="HRDepartmentDAL.cs" />
+    <Compile Include="HREmployeeDAL.cs" />
+    <Compile Include="HRsm_roleDAL.cs" />
+    <Compile Include="HRSm_role_corp_allocDAL.cs" />
+    <Compile Include="HRSm_userDAL.cs" />
+    <Compile Include="HRsm_user_roleDAL.cs" />
+    <Compile Include="hz_imp_logDAL.cs" />
+    <Compile Include="hz_user_operationDAL.cs" />
+    <Compile Include="hz_user_role_operationDAL.cs" />
+    <Compile Include="KeyValueDAL.cs" />
+    <Compile Include="LogDAL.cs" />
+    <Compile Include="MailTemplateHelper.cs" />
+    <Compile Include="MySendMail.cs" />
+    <Compile Include="OracleSqlHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RoleTemplateDAL.cs" />
+    <Compile Include="SAPRoleDAL.cs" />
+    <Compile Include="SAPUserInfoDAL.cs" />
+    <Compile Include="SAPUserRoleDAL.cs" />
+    <Compile Include="SAP_ParametersDAL.cs" />
+    <Compile Include="SAP_ParametersSettingDAL.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="SyncConfigDAL.cs" />
+    <Compile Include="SyncTask.cs" />
+    <Compile Include="sys_HRUserResolutionDAL.cs" />
+    <Compile Include="Sys_UserName_ConflictResolutionDAL.cs" />
+    <Compile Include="TaskEmailDAL.cs" />
+    <Compile Include="TCRoleDAL.cs" />
+    <Compile Include="TC_UserGroupSettingDAL.cs" />
+    <Compile Include="TC_UserGroupSettingService.cs" />
+    <Compile Include="TC_UserInfo.cs" />
+    <Compile Include="TC_UserRoleDAL.cs" />
+    <Compile Include="Unitity.cs" />
+    <Compile Include="UserRoleDAL.cs" />
+    <Compile Include="UserTypeConfigDAL.cs" />
+    <Compile Include="VHECGangWei.cs" />
+    <Compile Include="v_adComputerInfoDAL.cs" />
+    <Compile Include="V_AdcomputerWorkGroupInfoDAL.cs" />
+    <Compile Include="V_AD_UserWorkGroupDAL.cs" />
+    <Compile Include="V_HECUSER_RoleDAL.cs" />
+    <Compile Include="V_HRSm_User_RoleDAL.cs" />
+    <Compile Include="V_Sap_UserRoleReportDAL.cs" />
+    <Compile Include="V_TCReportDAL.cs" />
+    <Compile Include="Web References\SendMail\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="xml\ReadXml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="iam dal.pfx" />
+    <None Include="iam database.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SendMail\MessageWebService.wsdl" />
+    <None Include="Web References\SendMail\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDataAccess\BaseDataAccess.csproj">
+      <Project>{5cc7b876-9323-4404-93a0-e7c966490b41}</Project>
+      <Name>BaseDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OLEDBExcelHelper\OLEDBExcelHelper.csproj">
+      <Project>{5fd9af2e-e099-48f2-912e-632a2d4b4630}</Project>
+      <Name>OLEDBExcelHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RazorEngine\RazorEngine.csproj">
+      <Project>{64128c85-b9af-4b4c-be83-04983ef7f8c9}</Project>
+      <Name>RazorEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.124.90.60:8002/MessageWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SendMail\</RelPath>
+      <UpdateFromURL>http://10.124.90.60:8002/MessageWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IAMEntityDAL_SendMail_MessageWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\SendMail\MessageWebService.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

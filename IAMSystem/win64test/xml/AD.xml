@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE list[
+  <!ELEMENT list (item*)>
+  <!ELEMENT item EMPTY>
+  <!ATTLIST item key CDATA #IMPLIED>
+  <!ATTLIST item zh CDATA #IMPLIED>
+]>
+<list>
+  <item key="UserID" zh="用户Id"/>
+  <item key="Posts" zh="岗位"/>
+  <item key="dept" zh="部门"/>
+  <item key="parentDept" zh="上级部门Id"/>
+  <item key="HRMoblePhone" zh="hr手机号"/>
+  <item key="ToPostsDate" zh="到职日期"/>
+  <item key="LeavePostDate" zh="离职日期"/>
+  <item key="IsRevoke" zh="部门是否移除"/>
+  <item key="RevokeDate" zh="移除日期"/>
+  <item key="IsSealed" zh="是否锁定"/>
+  <item key="Accountname" zh="Ad账号"/>
+  <item key="PASSWORD" zh="密码"/>
+  <item key="Id" zh="工号"/>
+  <item key="CnName" zh="中文姓名"/>
+  <item key="DisplayName" zh="显示名"/>
+  <item key="DESCRIPTION" zh="描述"/>
+  <item key="Department" zh="部门"/>
+  <item key="mailstorage" zh="邮箱大小"/>
+  <item key="Job" zh="职级"/>
+  <item key="ENABLE" zh="是否可用"/>
+  <item key="PATH" zh="路径"/>
+  <item key="Drive" zh="磁盘"/>
+  <item key="EnableDrive" zh="磁盘是否可用"/>
+  <item key="expiryDate" zh=""/>
+  <item key="ADMobile" zh="Ad手机号"/>
+  <item key="ADTel" zh="AD电话"/>
+  <item key="Email" zh="邮箱"/>
+  <item key="Lync" zh="Lync账号"/>
+  <item key="Group" zh="工作组"/>
+</list>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.124.88.176:8383/hecprod/wsdl/modules/sys/WS/unit/cux_unit_ws_query.svc" filename="auto.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

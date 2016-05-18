@@ -1,0 +1,103 @@
+﻿/*SystemHelpAdd  updat by liz 2012-11-20 10:04*/
+table{ margin-top:10px; border:1px solid #d2dbff; font-size:12px;}
+table td{*border-color:#d2dbff; _border:1px solid #d2dbff;}
+.left{background:#d2dbff;width:20%; float:left;}
+#treeview1{ font-size:14px; padding:4px;}
+.treeview1_0{ font-family:verdana,arial,helvetica,sans-serif;}
+.right{float: right;
+    padding: 10px 0;
+    width: 76%;}
+.con .right,.coned .right{ width:76%;}
+/*.First input[type="button"],.First input[type="submit"],.right input[type="button"],.right input[type="submit"]{ padding:2px 5px;}*/
+
+/*BulletionManager  updat by liz 2012-11-20 10:34*/
+#tableFitler,.style1{ background:#f4f4f4; width:600px; border:1px solid #cccccc}
+#tableFitler th,.style1 th{ padding:4px; background:#d2dbff; font-size:14px; font-weight:bold; color:#1a50b6; }
+#tableFitler td,.style1 td{ padding:4px; border-bottom:1px dashed #cccccc; font-size:12px;}
+#GridView1 th,#GridView2 th{ background:#d2dbff; color:#1A50B6; border:1px solid #4478eb; font-size:14px;}
+#GridView1 td,#GridView1 th,#GridView2 td,#GridView2 th{ border-color:#d2dbff; padding:4px; text-align:center;}
+
+#AspNetPager2,#AspNetPager1,#aspnetPage1{ padding:4px; margin-top:10px; height:20px; line-height:20px; font-size:14px;}
+#AspNetPager2 a,#AspNetPager1 a,#aspnetPage1 a{ background:#d2dbff; padding:4px 6px; margin-right:10px; text-decoration:none;}
+.aspnetPage1{ padding:4px; margin-top:10px; height:20px; line-height:20px; font-size:14px;}
+.aspnetPage1 a{ background:#d2dbff; padding:4px 6px; margin-right:10px; text-decoration:none;}
+
+/**/
+#tableList{  background:#ffffff; font-size:12px; text-align:left; border-collapse: collapse;
+    border-spacing: 0; border:1px;}
+#tableList th{background:#d2dbff; color:#1A50B6; border:1px solid #cccccc; font-size:14px; padding:4px; text-align:center;}
+#tableList td{ padding:4px; text-align:center; border-bottom: 1px dashed #CCCCCC;
+    font-size: 12px;
+    padding: 4px;}
+.ListTable td span{text-align:center;}
+
+/*LogManager*/
+ListTable
+.ListTable{  background:#ffffff; font-size:12px; text-align:left; border-collapse: collapse;
+    border-spacing: 0; border:1px;}
+.ListTable th{background:#d2dbff; color:#1A50B6; border:1px solid #c7d2ff; font-size:14px; padding:4px; text-align:center;}
+.ListTable td{ padding:4px; text-align:center; border: 1px solid #d2dbff;
+    font-size: 12px;
+    padding: 4px;}
+	
+		/**/
+#contentiframe {overflow:scroll; overflow-style:auto; width:99%; background:#ffffff;}
+
+
+/*知识库*/
+#Div_Answer .style1{ width:760px;}
+
+
+/*.sidebar,#switch,#contentiframe{ height:530px; overflow-y:auto;}*/
+
+
+/*updat by liz 2012/11/21*/
+h3.menutit{ font-size:14px; font-weight:bold; color:#1950b5;}
+.menutit .tit{ width:80px; display:block; float:left; text-align:left; padding-left:4px; }
+
+.mainbox{float:left; width:96%;}
+/*answ*/
+.answ{ list-style:none; padding:4px; background:#e7eaff; font-size:12px; width:98%;}
+.answ .astit{ font-size:14px;}
+.answ .asbox{ float:left; width:300px; background:#ffffff;}
+.style2{  background:#ffffff; font-size:12px; text-align:left; border-collapse: collapse;
+    border-spacing: 0; border:1px; width:98%;}
+.style2 th{ background:#d2dbff; color:#1A50B6; border:1px solid #4478eb; font-size:14px;}
+.style2 td,.style2 th{ border-color:#d2dbff; padding:4px; text-align:center; *border:1px solid #d2dbff;}
+
+.style3{  background:#e7eaff; font-size:12px; text-align:left; border-collapse: collapse;
+    border-spacing: 0; border:1px; width:98%;}
+.style3 th{ background:#d2dbff; color:#1A50B6; border:1px solid #4478eb; font-size:14px;}
+.style3 td,.style3 th{ border-color:#d2dbff; padding:4px; border-bottom:1px dashed #cccccc;}
+
+
+.btn,#btAdd{ background:url(../images/btn_bg.gif) bottom repeat-x;_background:url(../images/btn_bg.gif) repeat-x; border:1px solid #3064c3; padding:0 12px;_padding:0 3px; margin:0 2px; height:24px; line-height:24px; font-size:13px; cursor:pointer;}
+
+
+/*updat by liz 2012/11/23*/
+.clin{display: block;float: left;height: 18px;padding:0 16px 0 0;width: 250px;}
+.clina{display: block;float: left;height: 18px;padding:0 16px 0 0;width: 250px;}
+.clin label,.clin input{ float:left; display:inline;}
+.clin input{ margin:2px;}
+.clin label{font-size:12px;}
+.clin2{display: block;float: left;height: 20px;padding:0 4px;width:auto; background:#d3def3; margin:1px;}
+
+.checklin{ clear:both;}
+#cblAuthorityIds label,.checklin label{ margin:0 10px 0 0; font-size:12px; float:left; display:inline;}
+.checklin input{ margin:2px; float:left; display:inline;}
+
+/*updat by liz 2012/11/27*/
+.ifr_div{width:100%;height:600px; position:fixed; top:0; left:0;} 
+ .ifr_div img{ vertical-align:middle;} 
+ .proccess{border:0px solid;border-color:#009900;height:600px;line-height:600px;width:100%; background-color:#eeeeee;filter:alpha(opacity=76);opacity:0.9; text-align:center;margin:0;position:fixed;top:0;left:0;} 
+ .proccess b{vertical-align:middle;background:url(<%=Page.ResolveUrl("~/images/loading.gif") %>) no-repeat 0 center;padding-left:35px;display:inline-block;} 
+ 
+ 
+ /*error by liz 2012/12/03*/
+ .error{ width:100%; min-height:400px; background:url(../images/errbg.jpg) repeat-x  top; margin:0; padding-top:60px;}
+  table.errorb{ border:0 none;}
+ .errbox{ width:700px; padding:50px; margin:0 auto; border:1px solid #cacaca;background:url(../images/errboxbg.jpg) repeat-x bottom;}
+ .errlin{ border-left:1px solid #cbcbcb; padding-left:40px; color:#555555;}
+ .errt1{ font-family:"微软雅黑",宋体,Arial, Helvetica, sans-serif; font-size:16px;}
+ .errsmore{ font-size:12px; font-weight:normal; padding:10px 0;}
+ 

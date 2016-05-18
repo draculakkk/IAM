@@ -1,0 +1,36 @@
+﻿
+
+ #tableFitler 
+        {
+            width: 40%;
+        }
+         #tableFitler th{FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: white; HEIGHT: 25px; background-image:url(../../images/win_top.png)}
+ #tableAdd
+ {
+     width:60%;
+     }
+     #tableAdd th{FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: white; HEIGHT: 25px; background-image:url(../../images/win_top.png)}
+      
+        .lefttd{width:20%;text-align:right;}
+        .backgroundColor1{background:#f7f7f7;}
+        .bacgroundColor2{background:#f7f7f7}
+        
+
+body {
+	margin-left: 3px;
+	margin-top: 0px;
+	margin-right: 3px;
+	margin-bottom: 0px;
+}
+.STYLE1 {
+	color: #e1e2e3;
+	font-size: 12px;
+}
+.ListTable {width:100%;border:0;}
+.ListTable th {FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: white; HEIGHT: 25px; background-image:url(../../images/win_top.png)}
+.ListTable td {
+	color: #344b50;
+	font-size: 12px;
+	text-align:center;
+}
+.ListTable tr{background:#fff}

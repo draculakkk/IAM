@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ax221="http://CTree/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://CTree" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://CTree" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>MyTCservice1234</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://CTree/xsd">
+      <xs:complexType name="Tree2">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="childs" nillable="true" type="ax221:Tree2" />
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Tree">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="childs" nillable="true" type="xs:anyType" />
+          <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parent" nillable="true" type="ax221:Tree" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UserInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="mailaddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="defgroup" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="groups" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OSName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="groupmember_setting" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="last_sync_date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="license_level" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax222="http://CTree/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://CTree">
+      <xs:import namespace="http://CTree/xsd" />
+      <xs:element name="sw">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="gy" nillable="true" type="ax222:Tree2" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ww" nillable="true" type="ax222:Tree" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MyTCservice1234Exception">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="MyTCservice1234Exception" nillable="true" type="ns:Exception" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="showinfo">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="showinfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="ax222:UserInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="maina">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="mainaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax222:Tree2" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="load">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="loadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax222:Tree2" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="swRequest">
+    <wsdl:part name="parameters" element="ns:sw" />
+  </wsdl:message>
+  <wsdl:message name="mainaRequest">
+    <wsdl:part name="parameters" element="ns:maina" />
+  </wsdl:message>
+  <wsdl:message name="mainaResponse">
+    <wsdl:part name="parameters" element="ns:mainaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MyTCservice1234Exception">
+    <wsdl:part name="parameters" element="ns:MyTCservice1234Exception" />
+  </wsdl:message>
+  <wsdl:message name="loadRequest">
+    <wsdl:part name="parameters" element="ns:load" />
+  </wsdl:message>
+  <wsdl:message name="loadResponse">
+    <wsdl:part name="parameters" element="ns:loadResponse" />
+  </wsdl:message>
+  <wsdl:message name="showinfoRequest">
+    <wsdl:part name="parameters" element="ns:showinfo" />
+  </wsdl:message>
+  <wsdl:message name="showinfoResponse">
+    <wsdl:part name="parameters" element="ns:showinfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MyTCservice1234PortType">
+    <wsdl:operation name="sw">
+      <wsdl:input wsaw:Action="urn:sw" message="ns:swRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="maina">
+      <wsdl:input wsaw:Action="urn:maina" message="ns:mainaRequest" />
+      <wsdl:output wsaw:Action="urn:mainaResponse" message="ns:mainaResponse" />
+      <wsdl:fault wsaw:Action="urn:mainaMyTCservice1234Exception" name="MyTCservice1234Exception" message="ns:MyTCservice1234Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="load">
+      <wsdl:input wsaw:Action="urn:load" message="ns:loadRequest" />
+      <wsdl:output wsaw:Action="urn:loadResponse" message="ns:loadResponse" />
+      <wsdl:fault wsaw:Action="urn:loadMyTCservice1234Exception" name="MyTCservice1234Exception" message="ns:MyTCservice1234Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="showinfo">
+      <wsdl:input wsaw:Action="urn:showinfo" message="ns:showinfoRequest" />
+      <wsdl:output wsaw:Action="urn:showinfoResponse" message="ns:showinfoResponse" />
+      <wsdl:fault wsaw:Action="urn:showinfoMyTCservice1234Exception" name="MyTCservice1234Exception" message="ns:MyTCservice1234Exception" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MyTCservice1234Soap11Binding" type="ns:MyTCservice1234PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sw">
+      <soap:operation soapAction="urn:sw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="maina">
+      <soap:operation soapAction="urn:maina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyTCservice1234Exception">
+        <soap:fault use="literal" name="MyTCservice1234Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="load">
+      <soap:operation soapAction="urn:load" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyTCservice1234Exception">
+        <soap:fault use="literal" name="MyTCservice1234Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="showinfo">
+      <soap:operation soapAction="urn:showinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyTCservice1234Exception">
+        <soap:fault use="literal" name="MyTCservice1234Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MyTCservice1234Soap12Binding" type="ns:MyTCservice1234PortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sw">
+      <soap12:operation soapAction="urn:sw" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="maina">
+      <soap12:operation soapAction="urn:maina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyTCservice1234Exception">
+        <soap12:fault use="literal" name="MyTCservice1234Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="load">
+      <soap12:operation soapAction="urn:load" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyTCservice1234Exception">
+        <soap12:fault use="literal" name="MyTCservice1234Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="showinfo">
+      <soap12:operation soapAction="urn:showinfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyTCservice1234Exception">
+        <soap12:fault use="literal" name="MyTCservice1234Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MyTCservice1234HttpBinding" type="ns:MyTCservice1234PortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="sw">
+      <http:operation location="sw" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="maina">
+      <http:operation location="maina" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="load">
+      <http:operation location="load" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showinfo">
+      <http:operation location="showinfo" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyTCservice1234">
+    <wsdl:port name="MyTCservice1234HttpSoap11Endpoint" binding="ns:MyTCservice1234Soap11Binding">
+      <soap:address location="http://10.124.88.149:8989/axis2/services/MyTCservice1234.MyTCservice1234HttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="MyTCservice1234HttpSoap12Endpoint" binding="ns:MyTCservice1234Soap12Binding">
+      <soap12:address location="http://10.124.88.149:8989/axis2/services/MyTCservice1234.MyTCservice1234HttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="MyTCservice1234HttpEndpoint" binding="ns:MyTCservice1234HttpBinding">
+      <http:address location="http://10.124.88.149:8989/axis2/services/MyTCservice1234.MyTCservice1234HttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

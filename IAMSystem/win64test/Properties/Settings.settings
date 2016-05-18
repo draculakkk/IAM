@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="win64test.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="win64test_WebReference_auto_service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.124.88.176:8383/hecprod/modules/sys/WS/user/cux_user_ws_query.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

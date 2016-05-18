@@ -1,0 +1,127 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Customer Service Issue</title>
+    <style type="text/css">
+        .content_edge {
+            
+            overflow: hidden;
+            width: 0.75pt;
+            padding: 0 0 0 0;
+        }
+
+        .content_header {
+            height: 25px;
+            width: 528pt;
+            background: #ffcd00;
+            padding-right: 30px;
+            text-align: right;
+            font-family: "Palatino Linotype";
+            font-size: 10.5pt;
+            font-weight: bold;
+        }
+
+        .content_body {
+            padding-left: 20px;
+            padding-top: 10px;
+            vertical-align: top;
+           
+            width: 528pt;
+        }
+
+        .content_bottom {
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 110%;
+            text-align: center;
+            color: #777777;
+            font-size: 9.5pt;
+            font-family: "Verdana";
+            height: 50px;
+        }
+
+        .paragraph_first {
+            line-height: 150%;
+            margin-top: 0px;
+            font-family: "Verdana";
+            font-size: 10.5pt;
+        }
+
+        .paragraph {
+            line-height: 150%;
+            margin-top: 0px;
+            font-family: "Verdana", "宋体";
+            font-size: 9.5pt;
+        }
+
+        .paragraphCN {
+            line-height: 150%;
+            margin-top: 0px;
+            font-family: "Verdana", "宋体";
+            font-size: 10pt;
+            text-indent: 2em;
+        }
+        .info {
+           border-collapse:collapse;
+        }
+            .info th {
+            padding:6px;
+            background-color:#336699;
+            font-size:12px;
+            font-family:"Verdana", "宋体";
+            color:white;
+            }
+            .info td {
+            padding:6px;
+            background-color:white;
+            color:black;
+            font-size:12px;
+            }
+    </style>
+</head>
+<body>
+    <table cellspacing="0" cellpadding="0" align="center" border="0" width="750">
+        
+        <tr>
+            <td class="content_edge"></td>
+            <td class="content_edge"></td>
+        </tr>
+        <tr>
+            <td class="content_edge"></td>
+            <td class="content_body">
+                <p>Hi:</p>
+                <p class="paragraphCN">@(Model.Actioner) 于 @(Model.time) 同步了 @(Model.SystemName) 系统中账号信息 发现以下账号存在账号信息及角色冲突:<br />
+                </p>
+            </td>
+            <td class="content_edge">
+              
+            </td>
+        </tr>
+         <tr><td colspan="3"></td></tr>
+         <tr><td colspan="3">&nbsp;&nbsp;</td></tr>
+         <tr><td colspan="3">&nbsp;&nbsp;</td></tr>
+        <tr><td colspan="3">账号信息：</td></tr>
+        <tr>
+            <td colspan="3">
+           
+                @(Model.UserInfo)
+            </td>
+        </tr>
+         <tr><td colspan="3">&nbsp;&nbsp;</td></tr>
+        <tr><td colspan="3">&nbsp;&nbsp;</td></tr>
+       
+        <tr>
+            <td class="content_edge"></td>
+            <td class="content_bottom">
+                <hr />
+                <span>Please contact ******* if any enquiry or suggestion</span><br />
+                <span>This Email is sent by IAM system automatically, do NOT reply</span><br />
+                </td>
+            <td class="content_edge"></td>
+        </tr>
+        
+    </table>
+</body>
+</html>
