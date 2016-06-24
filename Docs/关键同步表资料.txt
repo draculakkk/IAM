@@ -1,0 +1,21 @@
+HEC用户角色信息同步任务
+
+
+IAM2_WebReference_HEC_bumen_auto_service
+HECSyncRole
+
+
+INSERT INTO TC_UserInfo([UserID] ,[UserName] ,[SystemName] ,[PASSWORD] ,[LastLoginTime] ,[DefaultRoleID] ,[DefaultDisk] ,[DefaultLocalDisk] ,[UserStatus] ,[GroupAdmin] ,[GroupStatus] ,[GroupDefaultRole] ,[GroupOut] ,[LicenseLevel] ,[mailAddress] ,[DefaultGroup] ,[Memo] )  VALUES('SHAC080132','鲁烨杰','shac080132','','2016/6/22 14:49:15','','','','0','','','','','1','luyejie@shac.com.cn','PTD.PT','')
+
+
+
+SyncTCGroupSettings
+TC_UserGroupSettingDAL
+Alignment_Value_Fun
+HECSyncServices
+
+
+
+
+
+-		groupmember_setting	{string[4]}	string[]
