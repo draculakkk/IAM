@@ -1,0 +1,10 @@
+account:kaichang1
+pwd:Kai12345
+
+UAT:10.124.87.172
+shac\admin-iam
+Iam12345
+
+ON:10.124.90.49
+shac\admin-iam
+Iam12345
