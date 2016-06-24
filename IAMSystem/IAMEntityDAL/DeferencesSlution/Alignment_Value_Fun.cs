@@ -98,7 +98,7 @@ namespace IAMEntityDAL.DeferencesSlution
                 module.P1 = proper[i].Name;
                 module.P2 = "user";
                 
-                if (!val1.Trim().Equals(val2.Trim()))
+                if (!val1.Trim().Equals(val2.Trim(), StringComparison.OrdinalIgnoreCase))
                 {
                     if (classa.GetType().Name == "AD_UserInfo")
                     {

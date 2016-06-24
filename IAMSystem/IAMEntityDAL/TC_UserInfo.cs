@@ -106,9 +106,9 @@ namespace IAMEntityDAL
                 });
                 if (module != null)
                 {
-                    module.UserID = module.UserID.ToUpper();
+                    //module.UserID = module.UserID.ToUpper();
                     entity.UserID = entity.UserID.ToUpper();
-                    AddDeference(module, entity, Unitity.SystemType.TC, "UserID", module.UserID, module.UserID);
+                    AddDeference(module, entity, Unitity.SystemType.TC, "UserID", module.UserID.ToUpper(), module.UserID.ToUpper());
                 }
                 else
                 {

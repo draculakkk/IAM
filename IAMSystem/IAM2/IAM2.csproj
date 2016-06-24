@@ -350,7 +350,6 @@
     <Content Include="LayoutBase.aspx" />
     <Content Include="Login.aspx" />
     <None Include="mailTemplate\AddUserInfoBySAP.cshtml" />
-    <Content Include="Properties\PublishProfiles\iam.pubxml.user" />
     <Content Include="Report\ADComputerReport.aspx" />
     <Content Include="Report\ADGroupReport.aspx" />
     <Content Include="Report\ADUserReport.aspx" />
@@ -1432,8 +1431,6 @@
     <Content Include="mailTemplate\HREmployee.cshtml" />
     <Content Include="Content\akzhan-jwysiwyg\.gitignore" />
     <Content Include="Content\akzhan-jwysiwyg\CHANGES.markdown" />
-    <Content Include="Content\akzhan-jwysiwyg\help\bin\compile.bash" />
-    <Content Include="Content\akzhan-jwysiwyg\help\bin\compile.conf" />
     <Content Include="Content\akzhan-jwysiwyg\help\docs\code_style.rst" />
     <Content Include="Content\akzhan-jwysiwyg\help\docs\contributing.rst" />
     <Content Include="Content\akzhan-jwysiwyg\help\docs\get_dia.rst" />
@@ -1460,8 +1457,6 @@
     <Content Include="Admin\HECGangweiInfo.ashx" />
     <Content Include="KeepSession.ashx" />
     <Content Include="mailTemplate\AddUserInfoByHEC.cshtml" />
-    <None Include="Properties\PublishProfiles\iam-debug.pubxml" />
-    <None Include="Properties\PublishProfiles\iam-release.pubxml" />
     <Content Include="Template\ExcelTemplate\lizhibaobiao.xlsx" />
     <Content Include="Web References\WebReference_HEC_bumen\auto.wsdl" />
     <Content Include="Web References\WebReference_HEC_bumen\model.datasource">
@@ -1471,6 +1466,7 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\IAM6-24.pubxml" />
     <None Include="Web References\WebReference_HEC_Gangwei\auto.wsdl" />
     <Content Include="Web References\WebReference_HEC_Gangwei\model.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -1512,6 +1508,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\akzhan-jwysiwyg\help\bin\" />
     <Folder Include="downloadFile\" />
     <Folder Include="WebServices\" />
   </ItemGroup>

@@ -22,13 +22,18 @@ namespace IAM.BLL
         }
     }
 
+    /// <summary>
+    /// update: PXY
+    /// time:2016-6-24
+    /// do:修改webservices 操作时间
+    /// </summary>
     public class HECSyncServices
     {
         HECRoleDAL _hecIAMRoles = new HECRoleDAL();
         HECCompanyInfoDAL _hecIAMCompanys = new HECCompanyInfoDAL();
         HECUserInfoDAL _hecIAMUserRoles = new HECUserInfoDAL();
         /// <summary>
-        /// HEC ��ɫͬ������
+        /// HEC
         /// </summary>
         string hecName = "shacHec";
         string hecPassword = "shacHec";
@@ -36,7 +41,7 @@ namespace IAM.BLL
         {
 
             WebReference.auto_service _servcices = new WebReference.auto_service();
-
+            _servcices.Timeout = 1000 * 60 * 30; //修改操作时间
             var x = _servcices.execute(new WebReference.parameter() { ws_user_name = hecName, ws_password = hecPassword }).role_records.ToList();
             allcount = x.Count;
             Okcount = 0;
@@ -189,7 +194,7 @@ namespace IAM.BLL
             try
             {
                 WebReference2.auto_service _autoservices = new WebReference2.auto_service();
-                _autoservices.Timeout = 2000;
+                _autoservices.Timeout = 1000*60*30;
                 var x = _autoservices.execute(new WebReference2.parameter() { ws_user_name = hecName, ws_password = hecPassword }).user_records.ToList();
                 allcount = x.Count;
                 OKcount = 0;
@@ -243,11 +248,11 @@ namespace IAM.BLL
                     }
 
                     listrole.Add(entity);
-
+                    OKcount++;
                 }
                 
                     _hecIAMUserRoles.SyncHECUserInfo(listrole);//同步用户角色
-                    OKcount++;
+                   
                     HECSyncUserInfo(listuser);                               //同步账号信息
             }
             catch(Exception ex)
