@@ -77,7 +77,7 @@ namespace IAMEntityDAL
                     }
                     else
                     {
-                        var enti = listold.FirstOrDefault(it => it.UserID == userid && it.Memo == item.Memo);
+                        var enti = listold.FirstOrDefault(it => it.UserID.Equals(userid, StringComparison.OrdinalIgnoreCase) && it.Memo.Equals(item.Memo, StringComparison.OrdinalIgnoreCase));
                         if (enti == null)
                         {
                             if (new Sys_UserName_ConflictResolutionDAL().GetOne(item.UserID, "源系统中存在该角色", "IAM系统无该角色", "TC", item.Memo) == null)
@@ -127,7 +127,7 @@ namespace IAMEntityDAL
                     }
                     else
                     {
-                        var enti = list.FirstOrDefault(it => it.UserID == item.UserID && it.Memo == item.Memo);
+                        var enti = list.FirstOrDefault(it => it.UserID.Equals(item.UserID, StringComparison.OrdinalIgnoreCase) && it.Memo.Equals(item.Memo, StringComparison.OrdinalIgnoreCase));
                         if (enti == null)
                             userroles.IsAddNewNotInIAM<TC_UserGroupSetting>(item, item.UserID.ToLower(), Unitity.SystemType.TC, "TC_UserGroupSetting", item.Memo, "IAM系统存在该角色", "源系统中无该角色");
                     }
